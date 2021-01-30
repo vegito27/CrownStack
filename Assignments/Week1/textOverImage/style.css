@@ -1,0 +1,57 @@
+body{
+	background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+
+.container{
+	width: 50%;
+	margin: auto;
+	height: 600px;
+    background-image:url('../Images/dawn.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px solid white;
+	color: white;
+}
+
+section{
+	margin: 20px;
+}
+
+
+.centered{
+	text-align: center;
+}
+
+p{
+	width: 80%;
+	margin-left:10% ;
+	text-align: center
+}
+
+.footer{
+align-items: bottom: ;
+
+}
+
+aside {
+  width: 25%;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-left: 10px;
+  float: right;
+  font-style: italic;
+  background-color: gray;
+}
+
+h4{
+	color: black;
+}
+
+a{
+	color: blue;
+	text-decoration: none
+}
+
+a:hover{
+	color: red;
+}

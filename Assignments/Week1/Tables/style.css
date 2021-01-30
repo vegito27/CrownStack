@@ -1,0 +1,16 @@
+table{
+	width: 60%;
+	margin-left: 20%;
+	margin-top: 50px;
+	border: 1px solid black;
+}
+
+.centered{
+	text-align: center
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 20px;
+}

@@ -1,0 +1,82 @@
+body{
+	background-color: lightpink
+}
+
+
+.container{
+	width: 500px;
+	height: 500px;
+	border: 1px solid white;
+	margin: auto;
+	display: block;
+	margin-top: 90px;
+	color: white;
+
+}
+
+.im1
+{
+	width: 250px;
+	height: 150px;
+	/* background-color: orange; */
+	background-image: url('../Images/im1.jpeg');
+	background-repeat: no-repeat;
+	 background-size: 100% 100%;
+	
+
+}
+
+.im2{
+	width: 250px;
+	height: 150px;
+	/* background-color: red; */
+	background-image: url('../Images/im4.jpg');
+	background-repeat: no-repeat;
+	 background-size: 100% 100%;
+
+}
+
+
+.part1{
+	display: flex
+}
+
+
+.part2{
+	display: flex
+}
+
+
+.in1{
+	width: 200px;
+	height: 350px;
+	/* background-color: green; */
+	background-image: url('../Images/im2.jpg');
+	background-repeat: no-repeat;
+	 background-size: 100% 100%;
+
+	
+}
+
+.in2{
+	width: 300px;
+	height: 50px;
+	/* background-color: yellow; */
+	background-image: url('../Images/im3.jpeg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.in3{
+	width: 300px;
+	height: 300px;
+	/* background-color: dodgerblue; */
+	background-image: url('../Images/im5.webp');
+	background-repeat: no-repeat;
+	 background-size: 100% 100%;
+
+}
+
+.inpart1{
+	display: block;
+}
