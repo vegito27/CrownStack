@@ -393,6 +393,30 @@ async function doWork(){
 
 doWork()
 
+// Modified Form
+
+async function doWork2(){
+
+	try{
+
+		const response = await makeRequest('Facebook')
+
+		console.log(response)
+
+		const processedResponse =await ProcessRequest(response)
+
+		console.log(processedResponse)
+	}
+	catch(err){
+
+		console.log(err)
+
+
+	}
+
+}
+
+doWork2()
 
 function makingMyOwnPromise(){
 
@@ -414,8 +438,61 @@ makingMyOwnPromise()
 	console.log(response)
 })
 
+const posts=[
+	{title:"Post One",body:'This is post one'},
+	{title:"Post Two",body:'This is post Two'}
+]
 
-/
+
+function getPosts(){
+	setTimeout(()=>{
+
+		let output=''
+
+		posts.forEach((post,index)=>{
+
+			output+=`${post.title} -> ${post.body}    `
+
+		})
+
+		console.log(output)
+
+	}, 1000);
+}
+
+getPosts()
+
+
+function myFunc(){
+
+	let arr=[1,2,3,4,,5,6,7];
+
+	arr.forEach((value,index)=>{
+		console.log(`${value}`)
+	})
+}
+
+
+myFunc()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
