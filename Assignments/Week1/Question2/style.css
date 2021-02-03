@@ -6,7 +6,7 @@ body{
 	width: 50%;
 	margin: auto;
 	height: 600px;
-    background-image:url('../Images/dawn.jpg');
+    background-image:url('Images/dawn.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	border: 2px solid white;

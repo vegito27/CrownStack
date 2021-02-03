@@ -19,7 +19,7 @@ body{
 	width: 250px;
 	height: 150px;
 	/* background-color: orange; */
-	background-image: url('../Images/im1.jpeg');
+	background-image: url('Images/im1.jpeg');
 	background-repeat: no-repeat;
 	 background-size: 100% 100%;
 	
@@ -30,7 +30,7 @@ body{
 	width: 250px;
 	height: 150px;
 	/* background-color: red; */
-	background-image: url('../Images/im4.jpg');
+	background-image: url('Images/im4.jpg');
 	background-repeat: no-repeat;
 	 background-size: 100% 100%;
 
@@ -51,7 +51,7 @@ body{
 	width: 200px;
 	height: 350px;
 	/* background-color: green; */
-	background-image: url('../Images/im2.jpg');
+	background-image: url('Images/im2.jpg');
 	background-repeat: no-repeat;
 	 background-size: 100% 100%;
 
@@ -62,7 +62,7 @@ body{
 	width: 300px;
 	height: 50px;
 	/* background-color: yellow; */
-	background-image: url('../Images/im3.jpeg');
+	background-image: url('Images/im3.jpeg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
@@ -71,7 +71,7 @@ body{
 	width: 300px;
 	height: 300px;
 	/* background-color: dodgerblue; */
-	background-image: url('../Images/im5.webp');
+	background-image: url('Images/im5.webp');
 	background-repeat: no-repeat;
 	 background-size: 100% 100%;
 
