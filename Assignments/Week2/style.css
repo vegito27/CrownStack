@@ -1,0 +1,84 @@
+body{
+	background-image: url('./Icons/background.jpg')
+	;background-repeat: no-repeat;
+	background-size: 100% 110%;
+	
+}
+
+
+
+.container{
+	width: 32%;
+	height: 80%;
+	float: right;
+	margin-top:30px; 
+	box-shadow: 12px 5px 18px 25px gray;
+	background-color: white;
+	border-radius: 4px;
+	text-align:center ;
+	background-color: white;
+
+}
+
+input{
+	width: 250px;
+	margin:12px 0 12px 0;
+	height: 35px;
+	box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 0 5px;
+    color: black;
+
+}
+
+input[type=submit]{
+	width: 80px;
+	background-color: #008CBA;
+	color: white;
+	margin-left: 40px;
+}
+
+img{
+	margin-top: 10px;
+} 
+
+#arrow{
+	transform: rotate(180deg);
+	width: 100px;
+	margin-left: 10%;
+}
+
+.have{
+	display: flex;
+}
+
+h1{
+	color: white
+}
+
+.left_side{
+	flex-grow: 1;
+	color: white;
+}
+
+.left_side {
+	margin: 5% 0 0 10%;
+	text-shadow: 2px 2px orange;
+	font-size: 25px;
+	justify-content: space-evenly;	
+}
+
+span{
+	padding: 0;
+	margin: 0;
+	color: red;
+	font-size: 16px;
+	display: none
+
+}
+
+.input{
+	display: block
+}
+
