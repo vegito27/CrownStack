@@ -1,0 +1,175 @@
+body{
+	background-image: url('../Icons/background.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 110%;
+}
+.container{
+	width: 40%;
+	height: 100%;
+	margin-top:30px; 
+	box-shadow: 12px 5px 18px 25px gray;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.container input[type=submit]{
+	margin-left:44% 
+}
+
+.container h4,.container p{
+	text-align: center;
+}
+
+.container img{
+	display: flex;
+}
+
+.container span{
+	margin-left: 20px;
+}
+
+.input{
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+
+.input label{
+	width: 35%;
+	text-align: center
+}
+
+.container h4{
+	color: green;
+	font-size: 25px;
+	margin: 0;
+	text-shadow: 2px 2px #e5e5e5
+}
+
+.mywidth input {
+	width:75%
+}
+
+.mywidth select{
+	width: 75%;
+}
+
+input,select{
+	margin:12px 0 12px 0;
+	height: 35px;
+	box-sizing: border-box;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    color: black;
+    text-indent: 20px;
+
+}
+
+input[type=submit]{
+	width: 80px;
+	background-color: #008CBA;
+	color: white;
+	margin-left: 20px;
+	cursor: pointer;
+	text-indent: 0px;
+}
+
+select{
+	cursor: pointer;
+	text-indent: 0;
+}
+
+input[type=date]{
+	cursor: pointer;
+	text-indent: 0;
+	text-transform: uppercase
+}
+
+.left_side{
+	flex-grow: 1;
+	color: white;
+}
+
+img{
+	margin-top: 10px;
+} 
+
+#arrow{
+	transform: rotate(180deg);
+	width: 100px;
+	margin-left: 10%;
+}
+
+.have{
+	display: flex;
+}
+
+h1{
+	color: white
+}
+
+.left_side{
+	color: white;
+}
+
+.left_side {
+	margin: 5% 0 0 10%;
+	text-shadow: 2px 2px orange;
+	font-size: 25px;
+	justify-content: space-evenly;	
+}
+
+.left_side div{
+	text-align: center
+}
+
+#username,#email,#password,#password2,#mobile{
+	display: none
+}
+
+.input{
+	display: block
+}
+
+i{
+	position: relative;
+	color:gray;
+	left: 25px;
+}
+
+@media (max-width: 950px){
+
+	.have {
+		display: block;
+	}
+
+	.container{
+		width: 80%;
+		margin-top: 30px;
+		margin-left: 10%;
+		padding-bottom: 20px;
+		font-size: 15px
+	}
+ 
+	.left_side{
+	  	font-size: 20px
+	}
+
+	#arrow{
+		transform: rotate(180deg);
+		width: 50px;
+		margin-left: 5%;
+	}
+
+}
+
+@media (max-width: 500px){
+
+	body{
+		display: none
+	}
+}
+
+
+
+

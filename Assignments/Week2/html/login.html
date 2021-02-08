@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login | Login here!</title>
+	<link rel="icon" type="image/png" href="./Icons/crown.png">
+	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+	<div class="have">
+
+		<div class="left_side">
+
+			<h1>Welcome To Crown Stack</h1>
+			<h2>&nbsp&nbsp&nbsp Login Here !</h2>
+
+			<img id="arrow" src="../Icons/arrow.png" style="width:100px" >
+			<img id="arrow"   src="../Icons/arrow.png" style="width:80px" >
+			<img id="arrow" src="../Icons/arrow.png" style="width:60px">
+		
+		</div>
+
+		<div class="container">
+
+			<img src="../Icons/user.jpg" alt="" width="60px" style="padding:0;margin-left:44%;margin-top:-15px;margin-bottom: 10px; border-radius: 50%">
+
+			<h2 style="color:green">Login </h2><hr>
+					
+			<form action="../html/index.html" method="post" onsubmit="return validate()" >
+				
+				<div class="input" style="display:flex">
+					<label>Email:</label>
+					<div class="mywidth" style="width:100%;">		
+						<i class="fa fa-envelope"></i>
+						<input id="mail" type="email" name="email" onfocus="hide('email')" placeholder="Enter your Email..." /><br>
+						<span id="email"style="color:red;display:none;" >Please Enter the correct email</span>
+					</div>
+				</div>	
+					
+				<div class="input" style="display:flex">
+					<label>Password :</label>
+					<div class="mywidth" style="width:100%;">
+						<i class="fa fa-key"></i>
+						<input type="password" id="pass" name="password" onfocus="hide('password')" placeholder="Confirm Password" /><br>
+						<span id="password" style="color:red;display:none;"> Please Enter the valid Password***</span><br>
+					</div>
+				</div>
+
+				<input type="submit" name="submit" value="Submit">
+
+			</form>
+
+			<hr>
+			<br>
+			<p>Dont have an account? &nbsp <a href="./signup.html">Register here</a></p>
+			<br>
+
+		<div>
+
+	</div>
+
+	<script src="../javascript/loginscript.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script>
+		
+		function hide(id){
+
+			document.getElementById(id).style.display="none"
+
+		}
+
+	</script>
+	
+
+</body>
+</html>
