@@ -167,7 +167,12 @@ li{
 
 @media (max-width: 1150px) and (min-width:950px) {
 
-	.sidebar{		
+	.container #alpha{
+		display: block;	
+	}
+
+	.container .sidebar{	
+		
 		width: 22%;
 		
 	}
@@ -176,7 +181,12 @@ li{
 
 @media (max-width: 950px) and (min-width:880px) {
 
-	.sidebar{		
+	.container #alpha{
+		display: block;	
+	}
+
+	.container .sidebar{
+	display: block;		
 		width: 26%;
 	
 	}
@@ -184,9 +194,12 @@ li{
 
 @media (max-width: 880px) and (min-width:768px) {
 
-	.sidebar{		
+	.container #alpha{
+		display: block;	
+	}
+
+	.container .sidebar{	
 		width: 31%;
-		
 	}
 }
 
@@ -240,10 +253,30 @@ li{
 
 }
 
-@media (max-width: 600px){
+@media (max-width: 768px){
+
+	body{
+		margin-top: 10vh;
+		margin-bottom: 12vh;
+	}
 
     #me{	
 		visibility: hidden;
+	}
+	#header{
+		position: fixed;
+		top: 0;
+	}
+
+	.container .sidebar{
+		position: fixed;
+		display: none;
+		width: 30%;
+	}
+
+	.footer{
+		position: fixed;
+		bottom: 0;
 	}
 
 	#header ul li a{
@@ -252,6 +285,7 @@ li{
 		padding:0 2.5vw 0 2.5vw;
 		font-size: 25px;
 	}
+
 
 }
 
