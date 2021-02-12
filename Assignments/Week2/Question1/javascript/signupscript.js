@@ -2,7 +2,7 @@ const hide=id=>	document.getElementById(id).style.display="none";
 
 const mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 
-const passwordformat=/^(.{0,8}|[^0-9]*|[^A-Z]*|[^a-z]*|[a-zA-Z0-9]*)$/	
+const passwordformat=/^(.{8,}|[^0-9]*|[^A-Z]*|[^a-z]*|[a-zA-Z0-9]*)$/	
 
 
  SignUp=()=>{
@@ -43,14 +43,19 @@ const passwordformat=/^(.{0,8}|[^0-9]*|[^A-Z]*|[^a-z]*|[a-zA-Z0-9]*)$/
 
     	let data=JSON.parse(localStorage.getItem('data'))
 
-    	let isFind=data.find(user=>user.email===object.email)
+    	if(data){
 
-    	if(isFind){
+	    	let isFind=data.find(user=>user.email===object.email)
 
-		    document.getElementById("email").innerHTML="Email Already Exists,Use Different Email"
-		    document.getElementById("email").style.display="block";
-		    return false
-    	}
+	    	if(isFind){
+
+			    document.getElementById("email").innerHTML="Email Already Exists,Use Different Email"
+			    document.getElementById("email").style.display="block";
+			    return false
+	    	}
+	    }
+
+    	
     }
 	
 	if(object.mobile==='' || object.mobile==null){
@@ -69,8 +74,8 @@ const passwordformat=/^(.{0,8}|[^0-9]*|[^A-Z]*|[^a-z]*|[a-zA-Z0-9]*)$/
 			document.getElementById('password').style.display="block";
 			isvalid=false
 
-		}else if(passwordformat.test(object.password)){
-			document.getElementById('password').innerHTML="Password must contain A-Z,a-z,0-9,and special symbol";
+		}else if(!passwordformat.test(object.password)){
+			document.getElementById('password').innerHTML="Password must contain A-Z,a-z,0-9,{@*&$}";
 			document.getElementById('password').style.display="block";
 			isvalid=false
 		

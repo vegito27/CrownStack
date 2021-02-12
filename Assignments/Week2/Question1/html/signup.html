@@ -33,7 +33,7 @@
 					
 					<div class="mywidth" style="width:100%;">
 						<i class="fa fa-user"></i>
-						<input id="user" type="text" name="username" onfocus="hide('username')"  pattern="[A-Za-z]{5,}" placeholder="Enter the User Name.." required><br>
+						<input id="user" type="text" name="username" onfocus="hide('username')"  pattern="[A-Za-z]{5,}" placeholder="Enter the User Name.." ><br>
 						<span id="username" style="color:red;display:none;">This field is required atleast 5 characters</span>
 					</div>	
 				
@@ -56,7 +56,7 @@
 				<div class="mywidth" style="width:100%;">
 					
 					<i class="fa fa-phone"></i>
-					<input id="phone" type="tel" name="mobile" onfocus="hide('mobile')"  placeholder="Enter your mobile.." pattern="[0-9]{10}"required>
+					<input id="phone" type="tel" name="mobile" onfocus="hide('mobile')"  placeholder="Enter your mobile.." pattern="[0-9]{10}" >
 					<br>
 					<span id="mobile" style="color:red;display:none;">This field is required</span>
 				</div></div>
@@ -65,7 +65,7 @@
 				<label >Date Of Birth:</label>
 				<div class="mywidth" style="width:100%">
 					&nbsp&nbsp&nbsp	
-					<input type="date" id="birthday" name="birthday" required >
+					<input type="date" id="birthday" name="birthday"  >
 				</div>
 			</div>
 
@@ -88,7 +88,7 @@
 
 					<i class="fa fa-key"></i>
 					<input type="password" id="pass" name="password" onfocus="hide('password')" placeholder="Password" /><br>
-					<span id="password" style="color:red;display:none;">Password mut contain uppercase,lowercase and number</span></div>
+					<span id="password" style="color:red;display:none;">This field is required</span></div>
 			</div>
 
 			<div class="input" style="display:flex">
@@ -110,7 +110,7 @@
 
 	</div>
 
-	<script src="../javascript/signupscript.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="../javascript/signupscript.js" ></script>
 	
 </body>
 </html>

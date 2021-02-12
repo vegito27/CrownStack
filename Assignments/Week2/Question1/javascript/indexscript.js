@@ -81,6 +81,8 @@ function close(){
 
 		console.log(close[0])
 
+		if(close[0]){
+
 		close[0].onclick = function(){
 
 		let div = this.parentElement;
@@ -89,6 +91,7 @@ function close(){
 
 		setTimeout(()=>{ div.style.display = "none"; localStorage.setItem("shouldOpen",false); }, 60);
 		
+		}
 	}
 }
 
