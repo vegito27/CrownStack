@@ -1,0 +1,86 @@
+.section4{
+	position: relative;
+	color: white;
+}	
+
+				
+.data4{
+	position: absolute;
+	text-align: center;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+.slides h2,.slides p{
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.data4 h2{
+	padding: 50px 0;
+	font-size:3em 
+}
+
+.slides h1{
+	padding: 20px 0;
+	font-size: 2em;
+
+}
+
+.slides p{
+	line-height: 1.25;
+	font-size: 1.5em;
+}
+
+.slides h2{
+	line-height: 1.25;
+	padding-top: 50px;
+	font-size: 2.4em;
+	font-weight: 700;
+}
+
+.dots{
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+
+}
+
+.dot{
+	background-color: transparent;
+	border: 2px solid white;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.content .img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: -1
+}
+.section4{
+	box-shadow: inset 0 -420px 200px rgb(0 0 0 / 50%), inset 0 80px 100px rgb(0 0 0 / 50%);
+}
+
+
+.b1:hover{
+	background-color: white;
+	color: black
+
+}
+.active, .dot:hover {
+	  background-color: white;
+	  cursor: pointer;
+}

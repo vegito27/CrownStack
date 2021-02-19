@@ -1,0 +1,103 @@
+*,body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Titillium Web",sans-serif;
+}
+
+
+
+.container img {
+	width: 664px;
+	height: 286px;
+
+}
+
+.container{
+	width: 100%;
+}
+
+.container .articles{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.articles{
+	max-width: 700px;
+}
+
+.box{
+	width: 700px;
+}
+
+.box:hover{
+	cursor: pointer;
+}
+
+.imge{
+	width: 700px;
+	height: 280px;
+	background-image: url('../../Images/Press/master.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 750px
+
+}
+
+
+.article h2{
+	line-height: 1.25;
+    font-size: 1.4em;
+    color: #202A38;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+a{
+	text-decoration: none
+}
+
+.article{
+	padding: 10px 0;
+	margin-bottom: 30px
+}
+
+.article h3{
+	font-size: 0.9em;
+    color: #202A38;
+    line-height: 1.4em;
+    padding-bottom: 10px;
+}
+
+.article a{
+	text-transform: uppercase;
+    color: #2B5591;
+    display: block;
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+.section0{
+	background-image: url('../../Images/sun.jpg');
+	/* height: 40vh; */
+	min-height: 360px;
+    max-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: 100% 100% */
+}
+
+.section0{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section0 h1{
+	height: 90px;
+	font-size: 4.5em;
+	color: white;
+}
+
+
