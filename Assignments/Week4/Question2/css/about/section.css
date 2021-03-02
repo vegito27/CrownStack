@@ -39,7 +39,7 @@ li:hover{
 
 .data1{
   width: 85%;
-   margin: 0 auto;
+  margin: 0 auto;
 }
 
 .data1 ul {
@@ -374,7 +374,7 @@ hr{
 }
 
 
-@media screen and (max-width: 950px){
+@media screen and (max-width: 768px){
 
     .data0 h1{
       font-size: 3rem;
@@ -388,17 +388,35 @@ hr{
       line-height: 1.1;
       font-weight: 300;
     }
-
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 540px){
+
+    .data0 h1{
+      font-size: 2.5em;
+    }
+
+    .text h1{
+      font-size: 1.9em;
+    }
+}
+
+
+@media screen and (max-width: 425px){
+
+  .data0 h1{
+      font-size: 2em;
+  
+    }
+}
+
+
+@media screen and (max-width: 375px){
 
   body{
     display: none
   }
-  4
 }
-
 
 
 

@@ -44,7 +44,7 @@ let scroll2=()=>{
 		else{
 			//transparent
 
-			if(window.innerWidth>=700){
+			if(window.innerWidth>=769){
 
 				document.querySelector('.image2').classList.add('active')
 				document.querySelector('.image1').classList.remove('active')
@@ -63,45 +63,12 @@ let scroll2=()=>{
 	
 			}
 
-			// document.querySelector('.header').classList.add('header-transparent')
-
 		}
 	})
 }
 
 
 scroll2()
-
-
-
-
-let Resize=()=>{
-
-
-	document.addEventListener('resize',()=>{
-
-
-
-		if(window.innerWidth>700){
-
-			document.querySelector('.header').classList.remove('normal-header')
-
-
-
-		}else{
-
-			document.querySelector('.header').classList.add('normal-header')
-
-		}
-
-
-	})
-
-
-}
-
-Resize()
-
 
 
 let hide=()=>{
@@ -147,21 +114,20 @@ hide()
 
 
 
+let answer=()=>{
 
-
-
-window.addEventListener('resize',()=>{
-
-	if(window.innerWidth<700){
+	if(window.innerWidth<=769){
 
 		document.querySelector('.image1').classList.add('active')
 		document.querySelector('.image2').classList.remove('active')
 
 		document.querySelector('.header').classList.add('normal-header')
+
+
 	}
 	else{
 
-		if(window.scrollY<50){
+		if(window.scrollY<=50){
 
 		document.querySelector('.image2').classList.add('active')
 		document.querySelector('.image1').classList.remove('active')
@@ -169,8 +135,12 @@ window.addEventListener('resize',()=>{
 	}
 
 	}
+}
 
-})
+
+
+window.addEventListener('load',answer)
+window.addEventListener('resize',answer)
 
 
 

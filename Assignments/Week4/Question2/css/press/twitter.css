@@ -1,7 +1,3 @@
-.twitter{
-	display: flex;
-	justify-content: center
-}
 
 #tweet{
 	color: #2B5591;
@@ -9,23 +5,34 @@
     padding: 50px 0 60px 0;
     line-height: 1.25;
     font-weight: 300;
-    justify-content: center
+    justify-content: center;
+    width: 60%;
+    margin: auto;
 }
 
 .box {
 	height:auto;
+	width: 60%;
+	margin: 0 auto;
+}
+
+
+.box:hover{
+	cursor: pointer;
 }
 
 .box .head1{
 	height: 36px;
 	width: 100%;
 	display: flex;
+	/* float: right */
 }
 
 .head2{
 	height: 50px;
 	width: 100%;
 	display: flex;
+	/* float: right; */
 }
 
 .left{
@@ -56,8 +63,8 @@
 
 
 .para{
-	width: 664px;
-	float: right;
+	width: 100%;
+	/* float: right; */
 	font-size: 21px;
     line-height: 27px;
     font-weight: 300;
@@ -69,8 +76,8 @@
 	border: 1px solid gray;
 	border-radius:10px ;
 	overflow: hidden;
-	width: 664px;
-	float: right;	
+	width: 100%;
+	/* float: right;	 */
 }
 
 .card p{
@@ -82,7 +89,7 @@
 .carddown{
 	border-bottom: 1px solid gray;
 	width: 100%;
-	float: right;
+	/* float: right; */
 }
 
 .carddown p{
@@ -92,13 +99,16 @@
 
 }
 
+
 #p1{
 	font-weight: bold;
+	width: 60%;
 }
 
 #p2{
 	padding-bottom: 20px;
-	line-height: 16px
+	line-height: 16px;
+	width: 60%;
 }
 
 .option{
@@ -116,6 +126,7 @@
 #image{
 	display: flex;
 	justify-content: center;
+	width:100%;
 }
 
 
@@ -123,13 +134,12 @@
 	background-image:url('../../Images/Press/tweets/img1.jpeg');
 	width:332px;
 	height:200px;
-
 	background-size: 100% 100%;
 }
 
 
 .im1{
-	width: 20%;
+	width: 30%;
 	background-image: url("../../Images/Press/tweets/nb.svg");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -137,7 +147,7 @@
 }
 
 .im2{
-	width: 80%;
+	width: 70%;
 }
 
 .play{
@@ -146,9 +156,9 @@
 }
 
 
-
-@media screen and (max-width: 768px){
-	body, html {
+/* 
+@media screen and (max-width: 768px){ */
+	/* body, html {
 	    font-size: 16px;
 	}
 
@@ -213,11 +223,91 @@
 
 	.para{
 		width: 90%;
-		float: right;
+	
 		font-size: 18px;
 	    line-height: 23px;
 	    font-weight: 300;
 	}
+ */
+
+ @media screen and (max-width: 768px){
+
+ 	.box{
+ 		width: 85%;
+ 	}
+
+ 	.para{
+ 		font-size: 18px;
+ 	}
+
+ 	#tweet{
+ 		width: 85%;
+ 	}
+
+ 	.im2{
+ 		font-size: 14px;
+ 	}
+
+ 	.im1{
+ 		width: 30%;
+ 	}
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 540px){
+
+
+	.box{
+ 		width: 90%;
+ 	}
+
+ 	.para{
+ 		font-size: 18px;
+ 	}
+
+ 	#tweet{
+ 		width: 85%;
+ 	}
+
+ 	.im2{
+ 		font-size: 14px;
+ 	}
+
+ 	.im1{
+ 		width: 30%;
+ 	}
+
+
+
+
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 425px){
+
+
+
+}
+
+
+
+@media screen and (max-width: 375px){
+
+	body,*{
+		display: none
+	}
+
+
 
 }
 

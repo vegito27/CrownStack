@@ -45,47 +45,7 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-/* 
-.header{
-	background-color: white;
-	z-index: -10;
-}
-
-.active {
-	z-index:14;
-	color: white;
-}
-
-.header-normal{
-	background-color: white;
-	z-index: 10;
-	box-shadow: 0 0 2px 0 gray;
-}
-
-
-.header-transparent{
-	background: transparent;
-	position: absolute;
-	z-index:3;
-
-}
-
-.header2 a{
-	color: white;
-}
- */
-
-
-/* ****************************************************************  Header *************************************************************************/
+/* ****************************************************************  Header End *************************************************************************/
 
 nav .dropdown{
 	display: flex;
@@ -213,10 +173,13 @@ nav .dropdown{
 
 
 
-@media screen  and (max-width: 700px) {
+@media screen  and (max-width: 768px) {
   
-	body, html { font-size: 16px;
-		text-decoration: none}
+	body, html { 
+
+		font-size: 16px;
+		text-decoration: none
+	}
 
     .header nav{
 	  display: block
@@ -362,19 +325,25 @@ nav .dropdown{
 }
 
 
-@media screen and (min-width: 700px){
+@media screen and (max-width: 540px){
 
-	.box ul li{
-	    padding: 16px 0 !important;
+	.header {
+    height: 70px;
+    z-index: 30;
 	}
 
-	#open{
+	.menucontainer{
+		margin-top: 70px;
+	}
+
+
+	#youtube {
 		display: none
 	}
-	
 }
 
-@media screen and (min-width: 700px){
+
+@media screen and (min-width: 768px){
 
 
 	.menucontainer{
@@ -391,20 +360,29 @@ nav .dropdown{
 
 }
 
-@media screen and (max-width: 550px)
-{
-	#youtube {
-		display: none
-	}
 
+@media screen and (min-width: 768px){
+	.box ul li {
+	    padding: 16px 0 !important;
+	}
+}
+
+
+
+@media screen and (max-width: 425px){
+
+	.section0 .data0 h1{
+
+	    font-size: 2em;
+	}
 
 }
 
 
-@media screen and (max-width: 530px)
-{
-	*,body{
-		display: none
-	}
-}
 
+
+@media screen and (max-width: 350px){
+    *,body{
+        display: none
+    }
+}

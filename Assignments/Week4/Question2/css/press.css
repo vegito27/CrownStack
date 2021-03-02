@@ -96,20 +96,102 @@
 {
     #article h3{
         font-weight: 300;
-        line-height: 1.1;
-        padding: 5px 0;
+        line-height: 1;
+        padding: 4px 0;
+        font-size: 1em;
     }
 
     .line{
-       
         width: 77%;
         max-width: 1000px;
         height: 1px;
         background-color: white;
         margin:30px auto;
     }
-    
+
+    .section5 .data5 #article h2{
+        font-weight: 700;
+        font-size: 1.1em;    
+    }
+
+    #article a{
+        font-size: 0.8em;
+        margin-bottom: 10px;
+    }
+
 
 
 
 }
+
+
+
+@media screen and (max-width: 540px){
+
+    #article h3{
+        padding: 4px 0;
+        font-size: 0.9em;
+    }
+
+    .line{
+        width: 77%;
+        max-width: 1000px;
+        height: 1px;
+        background-color: white;
+        margin:20px auto;
+    }
+
+    .section5 .data5 #article h2{
+        font-weight: 700;
+        font-size: 1em;    
+    }
+
+    #article a{
+        font-size: 0.6em;
+        margin-bottom: 10px;
+    }
+
+    .section5 h1 {
+        padding: 30px 0;
+
+
+    }
+
+    
+}
+
+
+@media screen and (max-width: 425px){
+
+    .section5 .data5 {
+        width: 90%;
+    }
+
+    .section5 .data5 #article {
+        padding:10px;
+    }
+
+    .data2 p{
+        font-size: 1.8em;
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width: 375px){
+
+
+     .section5 .data5 #article h2{
+        font-weight: 700;
+        font-size: 0.85em;    
+    }
+
+
+
+
+
+}
+

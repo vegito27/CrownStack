@@ -64,11 +64,11 @@
 .social a {
     color: #2B5591;
     font-size: 1.55em;
-    margin-right: 10px;
-    margin-top: 10px;
     display: inline-block;
     cursor: pointer;
 }
+
+
 
 [class^="icon-"], [class*=" icon-"] {
     font-family: 'icomoon' !important;
@@ -178,6 +178,28 @@
 		width: 90%
 	}
 }
+
+
+
+@media screen and (max-width: 540px){
+
+	
+}
+
+
+@media screen and (max-width: 425px){
+
+
+}
+
+
+
+
+@media screen and (max-width: 350px){
+
+
+}
+
 
 
 

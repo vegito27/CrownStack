@@ -241,12 +241,93 @@
 
 /* *****************************************  Buttons End  *********************************************************************** */
 
-@media screen  and (max-width: 700px) {
+
+@media screen and (max-width: 540px){
+
+     .box .right{
+        font-size: 1em;
+    }
+
+    .right h3{
+        font-size: 1.2em;
+    }
+
+    .box .right {
+
+        width: 90%;
+    }
+
+    .right p{
+        font-size: 1.1em;
+
+    }
+
+    .btm2 h3{
+        margin-top: 0;
+        font-size: 1.1em;
+    }
+
+    .btna{
+        width: 150px;
+    }
+
+
+
+
+
     
+}
+
+
+@media screen and (max-width: 480px){
+
+
+    .box .right{
+        font-size: 0.9em;
+    }
+
+     .data2 h1{
+         max-width: 300px;
+         font-size: 2.2em;
+    }
+
+
+
+}
 
 
 
 
+@media screen and (max-width: 375px){
+
+    .section1 p{
+        font-size: 12px;
+        
+    }
+
+    .data2 h1{
+         max-width: 300px;
+         font-size: 2.1em;
+    }
+
+    .data2 p{
+        font-size: 16px;
+    }
+
+    .slides p{
+        font-size: 1.1em;
+    }
+
+
+
+
+}
+
+
+@media screen and (max-width: 350px){
+    *,body{
+        display: none
+    }
 }
 
 

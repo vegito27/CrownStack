@@ -7,28 +7,21 @@
 
 .container{
 	width: 100%;
+	margin: 0 auto;
 }
 
 .container img {
-	width: 700px;
+	width: 100%;
 	height: 286px;
 }
 
 .container .articles{
 	margin: 0 auto;
-	max-width: 700px;
-}
-
-.box{
-	width: 700px;
-}
-
-.box:hover{
-	cursor: pointer;
+	width: 60%;
 }
 
 .imge{
-	width: 700px;
+	width: 100%;
 	height: 280px;
 	background-image: url('../../Images/Press/master.png');
 	background-position: 50% 50%;
@@ -69,7 +62,7 @@ a{
     font-weight: 700;
 }
 
-.section0{
+.sectionPress{
 	background-image: url('../../Images/sun.jpg');
 	min-height: 360px;
     max-height: 560px;
@@ -78,13 +71,13 @@ a{
    
 }
 
-.section0{
+.sectionPress{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.section0 h1{
+.sectionPress h1{
 	height: 90px;
 	font-size: 4.5em;
 	color: white;
@@ -92,20 +85,22 @@ a{
 
 
 
-@media screen and (max-width: 760px){
-	body, html {
-	    font-size: 16px;
-	}
+@media screen and (max-width: 768px){
 
-	.section0{
+	/* .sectionPress{
 		width: 100%;
 		background-size: 100% 100%;
 	}
 
-	.section0 h1{
+	.sectionPress h1{
 		font-size: 3em;
 		height: 60px;
 		font-weight: 400
+	}
+
+	.container img {
+		width: 80%;
+		height: 286px;
 	}
 
 	.article img,.article{
@@ -155,7 +150,80 @@ a{
 
 	.header img{
 		width: 180px;
+	} */
+
+
+	.container .articles{
+		width: 80%;
 	}
 
+
 }
+
+
+
+@media screen and (max-width: 540px){
+
+	.sectionPress h1{
+		height: 80px;
+
+		font-size: 4em;
+		font-weight: 400;
+
+	}
+
+	.article h2{
+		font-size: 1.2em;
+	}
+
+
+	.article h3{
+		font-size: 0.8em;
+	  line-height: 1.2em;
+	    
+	}
+
+	.container img {	
+		height: 230px;
+	}
+
+
+
+}
+
+
+
+@media screen and (max-width: 425px){
+
+	.article h2{
+		font-size: 1em;
+	}
+
+	.container img {	
+		height: 200px;
+	}
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 375px){
+
+	.container img {	
+		height: 180px;
+	}
+
+
+
+
+}
+
+
+
+
+
+
 
