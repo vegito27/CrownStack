@@ -328,8 +328,8 @@ nav .dropdown{
 @media screen and (max-width: 540px){
 
 	.header {
-    height: 70px;
-    z-index: 30;
+	    height: 70px;
+	    z-index: 30;
 	}
 
 	.menucontainer{
@@ -343,7 +343,7 @@ nav .dropdown{
 }
 
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 769px){
 
 
 	.menucontainer{
