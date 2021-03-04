@@ -344,8 +344,8 @@ hr{
   }
 
   .row1,.row2{
-    flex-direction: column;
-    justify-content: center
+    justify-content: center;
+    flex-wrap: wrap
   }
 
   .people{
@@ -365,12 +365,6 @@ hr{
     padding-bottom: 40px
   }  
 
-  .imge img{
-    height: 15%;
-    width: 15%;
-    padding: 0 2px;
-  }
-
 }
 
 
@@ -388,6 +382,16 @@ hr{
       line-height: 1.1;
       font-weight: 300;
     }
+
+    .imge {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap
+     
+    }  
+
+
+
 }
 
 @media screen and (max-width: 540px){
@@ -399,6 +403,14 @@ hr{
     .text h1{
       font-size: 1.9em;
     }
+
+    .imge {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap
+     
+    }  
+
 }
 
 
@@ -406,8 +418,8 @@ hr{
 
   .data0 h1{
       font-size: 2em;
-  
     }
+
 }
 
 
