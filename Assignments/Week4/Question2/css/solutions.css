@@ -79,6 +79,27 @@
     background-color: #9ec000;
     color: white;
 }
+
+
+
+#bank1 .btna{
+   color: rgb(255, 175, 0);
+}
+
+#agri1 .btna{
+   color: #9ec000;
+}
+
+
+#agri1 .btna{color:#9ec000;}
+#msme1 .btna{color:#0767b2;}
+#fmcg1 .btna{color:#00b0bd;}
+#retail1 .btna{color:#0f4ef7;}
+#govt1 .btna{color: #10a1df;}
+#health1 .btna{color:#21b334;}
+
+
+
 .box ul #agri:hover{color:#9ec000;}
 .box ul #msme:hover{color:#0767b2;}
 .box ul #fmcg:hover{color:#00b0bd;}
@@ -239,6 +260,14 @@
 }
 
 
+#bank1 .btna:hover{background-color: rgb(255,175,0);color:white;}
+#agri1 .btna:hover{ background-color:#9ec000;color:white;}
+#msme1 .btna:hover{background-color:#0767b2;color:white;}
+#fmcg1 .btna:hover{background-color:#00b0bd;color:white;}
+#retail1 .btna:hover{background-color:#0f4ef7;color:white;}
+#govt1 .btna:hover{background-color: #10a1df;color:white;}
+#health1 .btna:hover{background-color:#21b334;color:white;}
+
 /* *****************************************  Buttons End  *********************************************************************** */
 
 
@@ -270,12 +299,6 @@
     .btna{
         width: 150px;
     }
-
-
-
-
-
-    
 }
 
 
@@ -290,7 +313,6 @@
          max-width: 300px;
          font-size: 2.2em;
     }
-
 
 
 }
@@ -317,9 +339,6 @@
     .slides p{
         font-size: 1.1em;
     }
-
-
-
 
 }
 
