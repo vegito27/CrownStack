@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/footer.css">
+	<link rel="stylesheet" href="../css/Login/login.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color: ivory">
+	<header class="header" style="z-index:90">
+		<img src="../Images//NavBar/logo_fixed.png" >		
+		<nav>
+			<div class="dropdown">		
+			<div class="dropdown2" >
+				<a class="dropbtn" href="../html/about.html">About</a>
+				<div class="dropdown-content2">
+					<a href="#" title="">What we do</a>
+					<a href="#" title="">Company Overview</a>
+					<a href="#" title="">Our Leadership</a>
+					<a href="#" title="">Sustainable Impact</a>
+				</div>
+			</div>
+
+			<div class="dropdown">
+				<div class="dropdown2" >
+					<a class="dropbtn" href="../html/index.html">Solution</a>
+					<div class="dropdown-content2">
+						<a href="#" title="">Agriculture </a>
+						<a href="#" title="">Health</a>
+						<a href="#" title="">FMCG</a>
+						<a href="#" title="">Government</a>
+						<a href="#" title="">MSME</a>
+						<a href="#" title="">Retail</a>
+						<a href="#" title="">Banking</a>
+					</div>				
+				</div>
+			</div>	
+
+			<div class="dropdown2">
+				<a class="dropbtn" href="../html/press.html">Press</a>
+			</div>
+
+			<div class="dropdown2">
+				<a class="dropbtn" href="../html/contact.html">Contact</a>
+			</div>
+
+			<div class="dropdown2">
+				<a id="open" class="dropbtn opt" style="">Menu</a>
+			</div>
+			<div class="dropdown2">
+				<a id="close" class="dropbtn" style="color:black;list-style:none;height:10px">Close</i></a>
+			</div>
+					
+		</nav>
+
+	</header>
+
+
+
+	<div class="magic-container" >
+			<div class="menucontainer menu1">
+				<div class="element">
+					<a class="mymenu">About</a>
+					<a class="mymenu">Solution</a>
+					<a class="mymenu">Press</a>
+					<a class="mymenu">Contact</a>
+				</div>
+			</div>
+	
+		</div>
+
+
+		<div class="login-container" style="background-color:turquoise">
+
+			<section class="card">
+				<div class="login">
+					<div class="image"></div>
+
+
+						<form method="post"  class="bounceInDown animated" >
+							<h2 style="color:green; text-shadow: 0.5px 0.5px yellow;">Login Here</h2>
+
+							<img class="avatar" src="../Images/alpha.png">
+							<label class="input">
+								<div class="data">
+									<input type="text" class="userId" name="userId" placeholder="Enter your User Id....">
+									<span class="error">This field is required****</span>
+								</div>
+							</label>
+							
+							<label><input class="submit" type="submit" name="submit" value="Submit"></label>
+							<hr>
+							<p>Dont have an Account ? <a>Register here</a></p>
+
+						</form>
+					
+				</div>
+				
+			</section>
+			
+		</div>
+
+		<div class="footer">
+	
+		<img class="stars" src="https://www.nfrnds.com/wp-content/themes/theme/img/footer_stars.svg">
+		<img class="logo" src="https://www.nfrnds.com/wp-content/themes/theme/img/footer_logo.svg">
+	    
+	    <div class="media">
+
+	    	<h5>Be in touch <span>info@nfrnds.com</span></h5>
+	        <div class="social">
+	            <a target="_blank" href="http://twitter.com/nfrnds" >
+	            	<img src="../Images/twit.ico" style="color:white" width="31px" height="31px"></a>
+
+	            <a target="_blank" href="https://medium.com/n-frnds" >
+	            	<img src="../Images/youtube.png" style="color:white" width="40px" height="31px"></a>
+	           
+	            <a target="_blank" href="http://facebook.com/gonfrnds">
+	             <img src="../Images/fb.ico" style="color:white" width="31px" height="31px"></a>
+	 
+	             <a target="_blank" href="https://medium.com/n-frnds" style="font-family:uho;text-decoration:none;font-weight:bold;font-size:40px">
+	             M</a>
+	        </div>
+	    </div>
+
+	    <p class="praktik-credit">
+	        Designed by <a href="http://www.praktik.co.il" target="_blank">Studio Praktik</a>
+	    </p>
+	</div>
+
+
+		<script>
+
+		 $.ajaxSetup({
+			  contentType: "application/json; charset=utf-8"
+			});
+
+			 $('.userId').focus(()=>{
+			 	$('.error').css('display','none')
+			 })
+
+	        $(".submit").click(function(e){
+	        	e.preventDefault(); 
+
+	        	let p=$('input[name=userId]').val()
+
+	        	if(p==="" || p===null){
+	        		$('.error').css("display","block")
+	        		return false
+	        	}
+
+	        	if(p!=="919530697527"){
+	        		$('.error').html("Please Enter The correct userId******");
+	        		$('.error').css("display","block")
+	        		return false
+		        }
+
+				$.ajax({
+					url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/login",
+					type: 'POST',
+					data: JSON.stringify({msisdn:`${p}`}),
+					error : function(err) { console.log('Error!', err) },
+					success: (data)=> { 
+					  	if(data.token){
+						  	$.ajax({
+								  url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/initialData",
+								  type: 'GET',
+								  headers: {"Netco-JWT": data.token},
+								  success:function(res){ 
+								  	sessionStorage.setItem('token',true );
+								  	window.location.href="./app.html" }
+								});
+							}
+					  }
+				});
+			}
+		)
+
+
+		</script>
+
+
+
+	
+</body>
+</html>

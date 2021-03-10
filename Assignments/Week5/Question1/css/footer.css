@@ -1,0 +1,160 @@
+
+.footer{
+	background: #102749;
+    height: 165px;
+    width: 100%;
+    position: relative;
+}
+
+.footer h5 {
+    display: block;
+    color: #fff;
+    font-size: 1em;
+    line-height: 160px;
+    right: 60px;
+    font-weight: 700;
+}    
+
+.footer h5 span {
+    font-size: 0.8em;
+    margin-left: 30px;
+    font-weight: 400;
+}
+
+.stars{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.footer .logo{
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%,50%);
+    left: 60px;
+}
+
+.footer .media {
+    position: absolute;
+    right: 60px;
+}
+
+.footer .media h5{
+	position: relative;
+    right: 180px;
+    margin-right: 36px;
+}
+
+.footer .media .social {
+    position: absolute;
+    right: 0;
+    top: 52px;
+    font-size: 100%;
+    display: flex;
+}
+
+.footer .social a {
+    color: #fff;
+    font-size: 31px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+.footer .praktik-credit {
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    font-size: 10px;
+    color: rgba(255,255,255,0.15);
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:768px){
+
+    .body{
+        font-size: 16px;
+    }
+
+    .footer{
+        height: 165px;
+    }
+
+    .footer .stars{
+        display: none
+    }
+
+    .footer h5{
+        display: none;
+        color: red;
+    }
+
+    .footer .logo{
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .media {
+        margin: 5px auto;
+        position: relative;
+    }
+
+    .media span{
+        display: none
+    }
+
+    .footer .media .social {
+        position: absolute;
+        /* top: 10%; */
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 0%);
+        font-size: 100%;
+    }
+
+    .footer .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .media {
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 50%);
+        align-items: center;
+
+    }
+
+    .media h5{
+        position: static;
+        margin-right: 0;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    body, html {
+        font-size: 17px;
+    }
+}
+
+
+
+
+
+
+
+
+

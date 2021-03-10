@@ -1,0 +1,171 @@
+*,body{
+	margin: 0;
+	padding: ;
+}
+
+.login-container{
+	width: 40em;
+	height: 35em;	
+	margin: 100px auto;
+	border-radius: 5px;
+	background-color: floralwhite;
+	box-shadow: 3px 5px 3px 5px mintcream;
+	padding: 10px 0;
+
+}
+
+ .image{
+	background-image: url("../../Images//NavBar/logo_fixed.png");
+	width: 14em;
+	height: 4em;
+	background-size: 100% 100%;
+	margin: auto;
+}
+
+
+
+.login form{
+	height:30em;
+	width: 28em;
+	margin: 2em auto;
+	background-color: mintcream;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: 1.5px 2px 1.5px 2px gray;
+}
+
+.avatar{
+	width: 8em;
+	height: 8em;
+	border-radius: 50%
+}
+
+
+input[type=text]{
+	height: 2.5em;
+	width: 20em;
+	margin: 1em 0;
+	border-color:gray;
+	border: 0.5px solid gray;
+	border-radius:5px;
+	padding-left:10px;
+	font-size: 14px;
+	color: gray;
+	box-shadow: 0.5px 0.5px gray;
+	text-indent: 5px
+	/* text-align: center  */
+
+	/* cursor: pointer */
+
+}
+
+input[type=submit]{
+	color: white;
+	background-color:dodgerblue;
+	width: 10em;
+	height: 2.5em;
+	margin: 0 1em;
+	border: 0.5px solid white;
+	cursor: pointer;
+	padding: 4px 3px;
+	text-align: center;
+	border-radius: 3px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	box-shadow: 0.5px 0.5px yellow;
+}
+
+.input  {
+	font-size: 1.3em;
+	margin-left:-0.8em;
+}
+hr{
+	width: 80%;
+	background-color: dodgerblue;
+}
+
+a{
+	color: dodgerblue;
+	cursor: pointer
+}
+
+a:active{
+	color: pink;
+}
+
+
+span{
+	font-size: 0.8em;
+	color: red;
+	display: none
+}
+
+
+.data{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+
+@keyframes bounceInDown {
+  0%, 100%, 60%, 75%, 90% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    transition-timing-function: cubic-bezier(0.215, .61, .355, 1)
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    -ms-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0)
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    -ms-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0)
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    -ms-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0)
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    -ms-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0)
+  }
+  100% {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+  }
+}
+
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown
+}
+
+
+
