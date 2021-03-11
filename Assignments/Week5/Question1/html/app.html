@@ -29,6 +29,11 @@
 			display: none
 		}
 
+		.pix{
+			display: none
+
+		}
+
 	</style>
 </head>
 <body>
@@ -93,12 +98,12 @@
 		</div>
 	</div>
 
-	<div class="alert success" >
+	<div class="alert success pix" >
 	  <p class="closebtn" style="margin:0;padding:0">&times;</p>  
 	  <strong>Success!</strong> You are Successfully Logged In.
 	</div>
 
-	<div class="container1" >
+	<div class="container1 pic" >
 		<h1 >Nothing is Too Fancy</h1>
 	</div>
 
@@ -142,22 +147,22 @@
 
 		    var div = this.parentElement;
 		    div.style.opacity = "0";
-		    setTimeout(function(){ div.classList.add('hideButton') }, 600);
+		    setTimeout(function(){ div.classList.add('hideButton');  sessionStorage.setItem('token',false);}, 600);
 		    // localStorage.setItem("showHeader","false")	
 		}
 
 
 		function Hide(){
-			let loginT=document.querySelector('.login2')
+
+			let loginT=document.querySelector('.pix')
 			let isTrue=sessionStorage.getItem('token');
 
-			if(isTrue===null ){
-
-				loginT.classList.remove('login1')
+			if(!isTrue || isTrue==="false"  ){
+				loginT.classList.add('pix');
 
 			}else{
 
-				loginT.classList.add('login1')
+				loginT.classList.remove('pix');
 
 			}
 

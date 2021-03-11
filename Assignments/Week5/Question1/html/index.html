@@ -229,57 +229,6 @@
 		
 	</div>
 
-	<script>
-
-		function Hide(){
-
-			let loginT=document.querySelector('.login2')
-
-
-			let isTrue=sessionStorage.getItem('token');
-			console.log(isTrue)
-
-
-			if(isTrue===null ){
-
-				loginT.classList.remove('login1')
-
-
-			}else{
-
-				loginT.classList.add('login1')
-				
-
-			}
-
-		}
-
-		Hide()
-
-
-		var p=localStorage.getItem("showHeader");
-
-		console.log("X")
-
-		var close = document.getElementsByClassName("closebtn");
-		
-		  close[0].onclick = function(){
-
-		    var div = this.parentElement;
-
-		    div.style.opacity = "0";
-
-		    setTimeout(function(){ div.classList.add('hideButton') }, 600);
-
-		    localStorage.setItem("showHeader","false")
-			
-		}
-
-
-
-
-</script>
-
 
 <script src="../javascript/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
