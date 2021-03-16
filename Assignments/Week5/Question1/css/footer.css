@@ -1,9 +1,10 @@
 
 .footer{
 	background: #102749;
-    height: 165px;
+    height: 155px;
     width: 100%;
     position: relative;
+
 }
 
 .footer h5 {
@@ -144,12 +145,75 @@
 
 }
 
-@media screen and (max-width: 900px){
-    body, html {
-        font-size: 17px;
-    }
-}
 
+
+@media screen and (max-width:375px){
+
+    .body{
+        font-size: 16px;
+    }
+
+    .footer{
+        height: 165px;
+        bottom: 0;
+    }
+
+    .footer .stars{
+        display: none
+    }
+
+    .footer h5{
+        display: none;
+        color: red;
+    }
+
+    .footer .logo{
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    .media {
+        margin: 5px auto;
+        position: relative;
+    }
+
+    .media span{
+        display: none
+    }
+
+    .footer .media .social {
+        position: absolute;
+        /* top: 10%; */
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 0%);
+        font-size: 100%;
+    }
+
+    .footer .social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer .media {
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 50%);
+        align-items: center;
+
+    }
+
+    .media h5{
+        position: static;
+        margin-right: 0;
+    }
+
+}
 
 
 

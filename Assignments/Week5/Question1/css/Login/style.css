@@ -174,11 +174,9 @@ nav .dropdown{
 
 .alert {
   padding: 20px;
-  margin-top: 100px;
   position: fixed;
   width: 100%;
   z-index: 40;
-
   color: white;
   opacity: 1;
   transition: opacity 0.6s;

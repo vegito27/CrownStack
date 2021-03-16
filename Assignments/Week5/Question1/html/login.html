@@ -9,8 +9,15 @@
 	<link rel="stylesheet" href="../css/Login/login.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<style type="text/css">
+		
+
+	</style>
 </head>
 <body style="background-color: ivory">
+
+
 	<header class="header" style="z-index:90">
 		<img src="../Images//NavBar/logo_fixed.png" >		
 		<nav>
@@ -70,11 +77,13 @@
 					<a class="mymenu">Contact</a>
 				</div>
 			</div>
-	
-		</div>
+	</div>
 
+	<!--  -->
 
-		<div class="login-container" style="background-color:turquoise">
+		<div class="wrapper">
+
+			<div class="login-container" style="background-color:turquoise">
 
 			<section class="card">
 				<div class="login">
@@ -103,37 +112,52 @@
 			</section>
 			
 		</div>
+			
+
+		</div>
+
+<!--  -->
+
+
 
 		<div class="footer">
 	
-		<img class="stars" src="https://www.nfrnds.com/wp-content/themes/theme/img/footer_stars.svg">
-		<img class="logo" src="https://www.nfrnds.com/wp-content/themes/theme/img/footer_logo.svg">
-	    
-	    <div class="media">
+			<img class="stars" src="https://www.nfrnds.com/wp-content/themes/theme/img/footer_stars.svg" />
+			<img class="logo" src="https://www.nfrnds.com/wp-content/themes/theme/img/footer_logo.svg" />
+		    
+		    <div class="media">
+		    	<h5>Be in touch <span>info@nfrnds.com</span></h5>
+		        <div class="social">
+		            <a target="_blank" href="http://twitter.com/nfrnds" >
+		            	<img src="../Images/twit.ico" style="color:white" width="31px" height="31px"></a>
 
-	    	<h5>Be in touch <span>info@nfrnds.com</span></h5>
-	        <div class="social">
-	            <a target="_blank" href="http://twitter.com/nfrnds" >
-	            	<img src="../Images/twit.ico" style="color:white" width="31px" height="31px"></a>
+		            <a target="_blank" href="https://medium.com/n-frnds" >
+		            	<img src="../Images/youtube.png" style="color:white" width="40px" height="31px"></a>
+		           
+		            <a target="_blank" href="http://facebook.com/gonfrnds">
+		             <img src="../Images/fb.ico" style="color:white" width="31px" height="31px"></a>
+		 
+		             <a target="_blank" href="https://medium.com/n-frnds" style="font-family:uho;text-decoration:none;font-weight:bold;font-size:40px">
+		             M</a></div>
+		    </div>
 
-	            <a target="_blank" href="https://medium.com/n-frnds" >
-	            	<img src="../Images/youtube.png" style="color:white" width="40px" height="31px"></a>
-	           
-	            <a target="_blank" href="http://facebook.com/gonfrnds">
-	             <img src="../Images/fb.ico" style="color:white" width="31px" height="31px"></a>
-	 
-	             <a target="_blank" href="https://medium.com/n-frnds" style="font-family:uho;text-decoration:none;font-weight:bold;font-size:40px">
-	             M</a>
-	        </div>
-	    </div>
+		    <p class="praktik-credit">
+		        Designed by <a href="http://www.praktik.co.il" target="_blank">Studio Praktik</a>
+		    </p>
+		</div>
 
-	    <p class="praktik-credit">
-	        Designed by <a href="http://www.praktik.co.il" target="_blank">Studio Praktik</a>
-	    </p>
-	</div>
 
 
 		<script>
+
+
+		if(sessionStorage.getItem('token1')){
+
+			window.location.href="./app.html"
+
+		}	
+
+		let regex=/^([+]\d{2})?\d{12}$/
 
 		 $.ajaxSetup({
 			  contentType: "application/json; charset=utf-8"
@@ -153,7 +177,7 @@
 	        		return false
 	        	}
 
-	        	if(p!=="919530697527"){
+	        	if(!p.match(regex)){
 	        		$('.error').html("Please Enter The correct userId******");
 	        		$('.error').css("display","block")
 	        		return false
@@ -163,19 +187,23 @@
 					url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/login",
 					type: 'POST',
 					data: JSON.stringify({msisdn:`${p}`}),
-					error : function(err) { console.log('Error!', err) },
+					error : function(err) { console.log("hello"); console.log('Error!', err) },
 					success: (data)=> { 
+
 					  	if(data.token){
-						  	$.ajax({
-								  url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/initialData",
-								  type: 'GET',
-								  headers: {"Netco-JWT": data.token},
-								  success:function(res){ 
-								  	sessionStorage.setItem('token',true );
-								  	window.location.href="./app.html" }
-								});
-							}
-					  }
+					  		sessionStorage.setItem('token',true);
+					  		sessionStorage.setItem('token1',data.token);
+					  		window.location.href="./app.html" 
+						
+						}else{
+
+							$('.error').html("This User does not exists****");
+							$('.error').css("display","block")
+							return false
+
+
+						}
+					}
 				});
 			}
 		)
