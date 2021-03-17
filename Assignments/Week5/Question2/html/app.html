@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>N-Frnds |</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="../fonts/Titillium_Web/regular.ttf" >
+	<link rel="stylesheet" href="../css/Login/app.css">
+	<link rel="stylesheet" href="../css/Login/login.css">
+	<link rel="shortcut icon" href="https://www.nfrnds.com/wp-content/themes/theme/img/favicon.ico" type="image/x-icon">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+	<style>
+		
+		.login1{
+			display: none
+		}
+
+		.pix{
+			display: none
+
+		}
+
+	</style>
+</head>
+<body>
+
+	<header class="header" style="z-index:90">
+		<img src="../Images//NavBar/transparentlogo.png" >		
+		<nav>
+			<div class="dropdown">		
+			<div class="dropdown2" >
+				<a class="dropbtn" href="../html/about.html"></a>
+			</div>
+
+			<div class="dropdown">
+				<div class="dropdown2" >
+					<a class="dropbtn" href="../html/index.html"></a>
+				</div>
+			</div>	
+
+			<div class="dropdown2">
+				<a class="dropbtn" href="../html/press.html"></a>
+			</div>
+
+			<div class="dropdown2">
+				<a class="dropbtn" href="../html/contact.html"></a>
+			</div>
+
+			<div class="dropdown2">
+				<a id="open" class="dropbtn opt" style=""><img src="../Images/NavBar/Icon/menuwhite.svg" style="height: 25px;width: 25px; margin-right:25px"></a>
+			</div>
+			<div class="dropdown2">
+				<a id="close" class="dropbtn" ><img src="../Images/NavBar/Icon/close.svg" style=" height: 25px;width: 25px;"></i></a>
+			</div>
+					
+		</nav>
+
+	</header>
+
+
+
+	<div class="magic-container" >
+			<div class="menucontainer menu1">
+				<div class="element">
+					<a class="mymenu"></a>
+					<a class="mymenu"></a>
+					<a class="mymenu"></a>
+					<a class="mymenu" ></a>
+					<a class="mymenu"  href="../html/login.html">Login</a>
+				</div>
+			</div>
+	</div>
+
+
+	<div class="alert success pix" >
+	  <p class="closebtn" style="margin:0;padding:0">&times;</p>  
+	  <strong>Success!</strong> You are Successfully Logged In.
+	</div>
+
+	<div class="container1 pic" >
+		<h1 >Nothing is Too Fancy</h1>
+	</div>
+
+	<script src="../javascript/app.js" type="text/javascript" charset="utf-8" async defer></script>
+
+
+	<script>
+
+
+		if(!sessionStorage.getItem('token1')){
+
+			window.location.href="./index.html"
+
+		}	
+	
+	</script>
+
+
+</body>
+</html>
