@@ -1,0 +1,140 @@
+.img{
+	opacity: 0.9;
+	height: 30px;
+	width: 30px;
+}
+
+ol{
+	padding: 0 20px;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	overflow-x: scroll;
+	height: 80px;
+	box-shadow:0 0 10px gray;
+	background-color: ivory;
+	margin-top: 5px;
+	/* border-top:1px solid teal; */
+	/* border-bottom:1px solid teal;	 */
+	border-right:1px solid teal;
+	border-left: 1px solid teal;	
+}
+
+ol::-webkit-scrollbar {
+	    display: none;
+	}
+
+ol li{
+	height: 100%;
+	cursor: pointer;
+	padding:0 30px;
+	padding-top: 10px;
+	transform: translateZ(-30px);
+	/* border: 0.3px solid black; */
+
+}
+
+ol li:hover{
+    transform: scale(1.1);
+    background-color: mintcream;
+    box-shadow:0 0 2px teal;
+    transition:transform 0.2s ease-in;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* 	.container{
+	border-left: 5px;
+	border-right: 5px
+}
+*/
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 70px;
+  background-color:magenta;
+  opacity: 0.8;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left:-25%;
+  margin-left: -60px;
+  font-size: 9px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 98%;
+  margin-top:-3px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent transparent transparent magenta;
+}
+
+.tooltip:hover .tooltiptext {
+	  visibility: visible;
+	  transition: visibility .25s ease;
+}
+
+a{
+	font-size:13px
+}
+
+.transform{
+	transform:scale(1.1) rotateZ(10deg);
+	background-color: #00bcd421;
+	padding: 3px;
+	/* background-color: dodgerblue; */
+
+}
+
+.img:hover{
+	opacity: 1
+}
+
+.stripe1{
+	margin-bottom:1px ;
+	margin-top: 71px;
+	width: 100%;
+	height: 50px;
+	border: 1px solid teal;
+	background-color: teal;
+	position: relative
+}
+
+.stripe1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+
+.stripe1 h2{
+	margin-left: 2%;
+	cursor: pointer;
+}
+
+
+
+.alpha{
+	margin-top: 20px
+}
+
+.select-bars{
+	width: 100%;
+	margin-right: 2%;
+	display: contents;
+}
