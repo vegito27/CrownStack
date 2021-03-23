@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Circular loader</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../css/loader2.css">
+</head>
+<body>
+	<button type="submit">click</button>
+
+	<div class="progress">
+	    <svg class="progress-circle" width="200px" height="200px" >
+		    <circle class="progress-circle-back"
+			        cx="80" cy="80" r="74"></circle>
+	        <circle class="progress-circle-prog"
+	                cx="80" cy="80" r="74"></circle>
+	    </svg>
+	  <div class="progress-text" data-progress="0">0%</div>
+	</div>	
+<script src="../javascript/loader2.js"></script>
+	
+</body>
+</html>

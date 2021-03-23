@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+		Loader1
+	</title>
+	<link rel="stylesheet" href="../css/loader1.css">
+	<script type="text/javascript" href="../javascript/loader1.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="progress-bar"></div>
+		<h1 class="count"></h1>
+		<button type="button" class="btn btn-primary">Start</button>
+		
+	</div>
+
+	<script type="text/javascript">
+		var body = document.querySelector('body'),
+    bar = document.querySelector('.progress-bar'),
+    counter = document.querySelector('.count'), button = document.querySelector('button'),
+    i = 0,
+    throttle = 0.7; // 0-1
+
+button.addEventListener('click',function draw() {
+  if(i <= 100) {
+    var r = Math.random();
+    
+    requestAnimationFrame(draw);  
+    bar.style.width = i + '%';
+    counter.innerHTML = Math.round(i) + '%';
+    
+    if(r < throttle) { // Simulate d/l speed and uneven bitrate
+      i = i + r;
+    }
+  } else {;
+    bar.className += " done";
+  }
+});
+	</script>
+
+	
+	
+</body>
+</html>

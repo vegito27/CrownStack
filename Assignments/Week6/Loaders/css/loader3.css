@@ -1,0 +1,17 @@
+.progress {
+  margin: 10px;
+  width: 60%;
+  height: 30px;
+}
+
+.progress-bar{
+
+background-color:#55de5b
+}
+.container-1{
+	margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
