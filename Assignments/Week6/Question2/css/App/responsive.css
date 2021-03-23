@@ -1,0 +1,87 @@
+@media screen and (max-width: 900px){
+
+			.stripe1 h2{
+				display: none
+			}
+
+			option{
+				color: red
+			}
+
+		}
+
+
+
+
+		@media screen and (max-width: 768px){
+
+			#stripe1 div{
+				display: flex;
+				justify-content: space-between
+			}
+
+			.stripe1{
+				margin-top: 66px;
+				height: 60px;
+				display: flex;
+				justify-content:space-between;
+			}
+
+			.stripe1 h2{
+				display: none;
+				
+			}
+
+			.stripe1 .bar{
+				text-align: center;
+			}
+		}
+
+
+		@media screen and (max-width: 525px){
+
+			ol{
+				width: 100%;
+			}
+
+			ol li{
+				height: 100%;
+				cursor: pointer;
+				padding:0 20px;
+				padding-top: 5px;
+
+			}
+
+			select{
+				width: 80%;
+			}
+
+			option{
+				font-size: 4px;
+			}
+
+			.stripe1{
+				margin-top: 66px;
+				height: 70px;
+				display: flex;
+				justify-content:space-evenly;
+			}
+
+			.stripe1 .bar{
+				text-align: center;
+			}
+
+		}
+
+		@media screen and (max-width: 375px){
+
+		}
+
+
+		@media screen and (max-width: 350px){
+
+			body{
+				display: none
+			}
+
+		}
