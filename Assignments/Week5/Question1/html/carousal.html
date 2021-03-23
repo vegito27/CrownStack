@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+		Carousal
+	</title>
+	<link rel="stylesheet" href="../css/carousal.css">
+	<link rel="stylesheet" href="../css/arrows.css">
+	<link rel="stylesheet" href="../css/automatic.css">
+	<link rel="stylesheet" href="../css/dotted.css">
+	<link rel="stylesheet" href="../css/multiple.css">
+
+</head>
+<body>
+	<header class="header">
+		<h3>Carousals and Sliders</h3>
+
+		<div class="dropdown">
+		  <a>Filter</a>
+		    <div class="dropdown-content">
+			  <a style="color:hotpink;font-size:18px" onclick="showAll()">All </a><br>
+			  <a style="color:hotpink;font-size:18px" id="arrowed" onclick="showArrowed()">Arrowed </a><br>
+			  <a style="color:hotpink;font-size:18px" onclick="showDotted()">Dotted </a>
+			</div>
+		</div>
+
+	</header>
+	<main>
+		<div class="container">
+
+			<!-- Arrowed Sliders -->
+
+			<div class="alpha arrowed">
+
+				<span class="d">(Arrrowed)</span>
+
+				<div class="slideshow-container">
+
+					<div class="mySlides fade">
+					   <div class="img" style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png);background-size: 100% 100% ;white;margin:0 auto;width:60%;height:200px"></div>
+					</div>
+
+
+					<div class="mySlides fade">
+					   <div class="img" style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png);background-size: 100% 100% ;white;margin:0 auto;width:60%;height:200px"></div>	  
+					</div>
+
+
+					<div class="mySlides fade">
+					    <div class="img" style="background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png);background-size: 100% 100% ;white;margin:0 auto;width:60%;height:200px"></div>
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				</div>
+			</div>
+
+			<!-- Button Sliders -->
+
+
+			<div class="alpha2 dotted">
+				<span class="d" style="color: white">Dotted</span>
+
+				<div class="slideshow-container3">
+
+					<div class="mySlides3 fade3">			  
+					     <div class="img" style="background-color: white;margin:0 auto;width:70%;height:200px">1</div>  
+					</div>
+
+					<div class="mySlides3 fade3">
+					    <div class="img" style="background-color: white;margin:0 auto;width:70%;height:200px">2</div>	  		
+					</div>
+
+					<div class="mySlides3 fade3">
+					    <div class="img" style="background-color: white;margin:0 auto;width:70%;height:200px">3</div>	  		
+					</div>
+
+					<br>
+
+					<div style="text-align:center">
+					  <span class="dot" style="color:white" onclick="currentSlide3(1)"></span> 
+					  <span class="dot"  style="color:white" onclick="currentSlide3(2)"></span> 
+					  <span class="dot"  style="color:white" onclick="currentSlide3(3)"></span> 
+					</div>
+					</div>
+
+			</div>
+
+
+			<div id="dotted2" class="alpha3 dotted">
+				<span class="d" style="color: white;">Multiple(Dotted)</span>
+				<div class="slideshow-container3">
+					<div class="display-area">
+					  <div class="cards-wrapper">
+					    
+					    <div class="card"><img src="https://picsum.photos/200?random=1" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=2" alt=""></div>  
+					    <div class="card"><img src="https://picsum.photos/200?random=3" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=4" alt=""></div>
+
+					    <div class="card"><img src="https://picsum.photos/200?random=5" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=6" alt=""></div>  
+					    <div class="card"><img src="https://picsum.photos/200?random=7" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=8" alt=""></div>
+					    
+					    <div class="card"><img src="https://picsum.photos/200?random=9" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=10" alt=""></div>  
+					    <div class="card"><img src="https://picsum.photos/200?random=11" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=12" alt=""></div>
+					    
+					    <div class="card"><img src="https://picsum.photos/200?random=13" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=14" alt=""></div>  
+					    <div class="card"><img src="https://picsum.photos/200?random=15" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=16" alt=""></div>
+					  </div> 
+					</div>
+					<div class="dots-wrapper">
+					  <button class="dot2 activex"></button>
+					  <button class="dot2"></button>
+					  <button class="dot2"></button>
+					  <button class="dot2"></button>
+					</div>
+				</div>			
+			</div>
+
+			<div id="arrowed2" class="alpha3">
+				<span class="d" style="color: white;">Multiple(Arrowed)</span>
+				<div class="slideshow-container3">
+					<div class="display-area">
+					  <div class="cards-wrapper pick">
+					    
+					    <div class="card"><img src="https://picsum.photos/200?random=9" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=10" alt=""></div>  
+					    <div class="card"><img src="https://picsum.photos/200?random=11" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=12" alt=""></div>
+					    
+					    <div class="card"><img src="https://picsum.photos/200?random=13" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=14" alt=""></div>  
+					    <div class="card"><img src="https://picsum.photos/200?random=15" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=16" alt=""></div>
+
+					     <div class="card"><img src="https://picsum.photos/200?random=1" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=2" alt=""></div>  
+					    <div class="card"><img src="https://picsum.photos/200?random=3" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=4" alt=""></div>
+
+					    <div class="card"><img src="https://picsum.photos/200?random=5" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=6" alt=""></div>  
+					    <div class="card"><img src="https://picsum.photos/200?random=7" alt=""></div>
+					    <div class="card"><img src="https://picsum.photos/200?random=8" alt=""></div>
+					  </div> 
+					  						
+					</div>
+					<a class="prev leftArrow" >&#10094;</a>
+					<a class="next rightArrow" >&#10095;</a>
+
+				</div>			
+			</div>
+
+			<div class="alpha1 automatic">
+				<span class="d" style="color: white">Automatic</span>
+					<div class="slideshow-container2">
+						
+						<div class="mySlides2 fade2">
+						   <div class="img" style="background-color: white;margin:0 auto;width:70%;height:200px">1</div>  
+						</div>
+
+						<div class="mySlides2 fade2">  
+						    <div class="img" style="background-color: white;margin:0 auto;width:70%;height:200px">2</div>	  		
+						</div>
+
+						<div class="mySlides2 fade2">
+						     <div class="img" style="background-color: white;width:70%;margin:0 auto;height:200px">3</div>
+						</div>
+					</div>
+				</div>
+		<br>		
+	</main>
+
+	<footer>
+		© Vegito 2021
+	</footer>
+
+	<!-- <script src="../javascript/main.js"></script> -->
+	
+	<script src="../javascript/arrows.js"></script>
+	<script src="../javascript/carousal.js"></script>
+	<script src="../javascript/automatic.js"></script>
+	<script src="../javascript/dotted.js"></script>
+	<script src="../javascript/multiple.js"></script>
+	<script src="../javascript/multipleArrowed.js"></script>
+
+
+</body>
+</html>
