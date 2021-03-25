@@ -1,12 +1,8 @@
-var close = document.getElementsByClassName("closebtn");
-		
-  close[0].onclick = function(){
 
-    var div = this.parentElement;
-    div.style.opacity = "0";
-    setTimeout(function(){ div.classList.add('hideButton');  sessionStorage.setItem('token',false);}, 600);
-    // localStorage.setItem("showHeader","false")	
-}
+  setTimeout(
+  	function() {
+                    $('.alert').fadeOut('fast');
+                }, 1000);
 
 
 function Hide(){

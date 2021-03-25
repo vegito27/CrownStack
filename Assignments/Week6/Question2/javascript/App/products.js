@@ -76,7 +76,7 @@ function getProductsByWholeSellerId(id){
 								<div id="product${productId}" onclick="addQuantity(this)" class="minus">+</div>
 							</div>
 						</div>
-						<button>Add To Cart</button>
+				
 					</div>
 				</div>`
 
@@ -150,7 +150,7 @@ function displayProductByCategory(id,categoryId){
 								<div id="product${productId}" onclick="addQuantity(this)" class="minus">+</div>
 							</div>
 						</div>
-						<button>Add To Cart</button>
+						
 					</div>
 				</div>`
 
@@ -179,7 +179,7 @@ function displayProductByCategory(id,categoryId){
 										<div id="product${productId}" onclick="addQuantity(this)" class="minus">+</div>
 									</div>
 								</div>
-								<button>Add To Cart</button>
+					
 							</div>
 						</div>`
 

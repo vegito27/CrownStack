@@ -1,20 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@700&family=Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Signika:wght@700&family=Slabo+27px&display=swap');
+
+
 body{
 	background-color: white;
 }
 .alpha ul{
 	margin: auto;
-	width: 100%;
+	max-width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-wrap: wrap;
 	list-style: none;
-	background-color: #00bcd421;
-	
-
 }
 
 .alpha li{
-	height: 400px;
+	max-height: 400px;
 	width: 180px;
 	border: 1px solid blue;
 	margin: auto;	
@@ -31,21 +33,21 @@ body{
 .container-p{
 	margin: auto;
 	min-height: 450px;
+
 }
 
 .product-container{
-	margin:15px;
 	height: auto ;
-	overflow: scroll;
 	display: flex;
-	justify-content: center;
-	padding: 0 10px;
-	position: relative
+	justify-content: flex-start;
+	position: relative;
+	flex-grow: 1;
 }
 
 .product-card{
 	margin: 20px;
-	width: 300px;
+	max-width: 300px;
+	min-width: 220px;
 	height: auto;
 	border-radius: 5px;
 	background-color: mintcream;
@@ -60,9 +62,9 @@ body{
 }
 
 .product-image{
-	width: 300px;
-	height: 200px;
-	/* background-color: #459c94; */
+	height: 180px;
+	background-color: white;
+	margin: auto;
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -72,30 +74,39 @@ body{
 
 .product-image img{
 	height: 90%;
-	width: 90%;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	max-width: 60%;
+	background-color: white;
 } 
 
 
+
 .quatity{
+	width: 60%;
+	margin: auto;
 	display: flex;
-	justify-content: space-evenly;
 	padding: 10px 0;
+	margin-bottom: 10px
 }
 
-h3{
-	font-family: open-sans sans-serif
+*{
+	font-family: 'Signika', sans-serif;
+	font-family: 'Slabo 27px', serif;
 }
 
 .plus,.minus{
+	width: 32%;
 	font-size: 25px;
 	cursor: pointer;
-	color: blue;
+	color: dodgerblue;
+	box-shadow: 0 0 3px gray
+
 }
 
 .value{
+	width: 36%;
 	font-size: 25px;
-	color: blue;
+	color: dodgerblue;
+	box-shadow: 0 0 3px gray
 }
 
 .content{
@@ -115,6 +126,11 @@ h3{
 	margin: auto;
 	
 	width: 200px;
+}
+
+h3{
+	color: #cc7b7b;
+	font-weight: 900;
 }
 
 
@@ -141,11 +157,11 @@ button{
 	font-size: 20px;
 }
 
-
-
 .description{
 	margin: auto;
 	width: 90%;
-	font-size: 14px;
+	font-size: 15px;
+	color: dimgrey;
+	margin-top: 20px;
 }
 

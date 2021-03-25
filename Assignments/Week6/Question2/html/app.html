@@ -34,12 +34,21 @@
 			display: none
 		}
 
+		select{
+			background-color: #07528e;
+		    width: auto;
+		    height: 30px;
+		    color: white;
+		    border-color: white;
+		    padding: 2px;
+		}
+
 	</style>
 </head>
 <body>
 
 	<header class="header" style="z-index:90">
-		<img src="../Images//NavBar/transparentlogo.png" >		
+		<img src="../Images/NavBar/logo_fixed.png" >		
 		<nav>
 			<div class="dropdown">		
 			<div class="dropdown2" >
@@ -57,7 +66,7 @@
 			</div>
 
 			<div class="dropdown2">
-				<a class="dropbtn" href="../html/contact.html">User Data</a>
+				<a class="dropbtn" style="color:dodgerblue" onclick="deleteToken()">Logout</a>
 			</div>
 
 			<div class="dropdown2">
@@ -142,12 +151,19 @@
 	</div>
 
 	<div class="app-footer">
-		<h3>@Vegito</h3>
+		<h2>@Vegito</h2>
 	</div>
 	
 	<script src="../javascript/app.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="../javascript/App/wholesale.js" type="text/javascript" ></script>
 	<script type="text/javascript">
+		
+		let deleteToken=()=>{
+
+			sessionStorage.removeItem('token1')
+			window.location.href="./index.html"
+	
+		}
 		
 	</script>
 	

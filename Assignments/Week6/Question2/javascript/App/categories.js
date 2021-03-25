@@ -29,7 +29,7 @@ function getCategories(id){
 
 				if(key==="imgUrl" && category.productCategoryId>=0){
 
-					$('.container ol').append(`<li><div id="p${category.productCategoryId}" onclick=handleCategory(this.id,${id}) class="tooltip"><img  class="img" src="https://res.cloudinary.com/nfrnds/image/upload/fmcgdd${value}" /><span class="tooltiptext">${category.categoryName}</span><a>${category.categoryName}</a></div></li>`)
+					$('.container ol').append(`<li><div id="p${category.productCategoryId}" onclick=handleCategory(this.id,${id}) class="tooltip"><img  class="img" src="https://res.cloudinary.com/nfrnds/image/upload/fmcgdd${value}" /><span class="tooltiptext">${category.categoryName}</span><div class="category-name">${category.categoryName}</div></div></li>`)
 				}
 
 					

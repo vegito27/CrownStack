@@ -21,6 +21,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="shortcut icon" href="https://www.nfrnds.com/wp-content/themes/theme/img/favicon.ico" type="image/x-icon">
+	<script>
+		if(sessionStorage.getItem('token1')){
+
+			window.location.href="./app.html"
+
+		}	
+	</script>
 	<style>
 		.login1{
 			display: none
@@ -432,13 +439,7 @@
 	</div>
 
 <!--------------------------------------------------------Footer Ends---------------------------------------------------------------->
-	<script>
-		if(sessionStorage.getItem('token')){
-
-			window.location.href="./app.html"
-
-		}	
-	</script>
+	
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="../javascript/slicker.js" ></script>

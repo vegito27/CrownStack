@@ -2,9 +2,13 @@
 	font-family: sans-serif;
 	width: 100%;
 	height: 60px;
-	background-color: #0b8674f7;
+	background:linear-gradient(dodgerblue,deepskyblue) ;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: white;
+}
+
+.add-to-cart{
+	display: none
 }
