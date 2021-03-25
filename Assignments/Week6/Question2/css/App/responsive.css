@@ -32,6 +32,19 @@
 	.stripe1 .bar{
 		text-align: center;
 	}
+
+	.dropdown-common{
+		 width: 120px;
+	}
+
+	.dropdown-select{
+		width: 80%;
+		padding: 0;
+
+	}
+
+
+
 }
 
 
@@ -71,6 +84,24 @@
 	.stripe1 .bar{
 		text-align: center;
 	}
+
+	.container-x{
+		flex-direction: column;
+	}
+
+	.dropdown-common{
+		display: inline;
+		 max-width: 110px;
+	}
+
+	.dropdown-select{
+		width: 80%;
+
+
+	}
+
+
+
 
 }
 

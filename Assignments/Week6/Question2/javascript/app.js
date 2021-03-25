@@ -1,8 +1,8 @@
 
-  setTimeout(
+setTimeout(
   	function() {
-                    $('.alert').fadeOut('fast');
-                }, 1000);
+                $('.alert').fadeOut('fast'); sessionStorage.setItem('token',false)
+            }, 1000);
 
 
 function Hide(){

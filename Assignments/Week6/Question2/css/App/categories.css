@@ -144,13 +144,13 @@ a{
 	margin-bottom:1px ;
 	margin-top: 80px;
 	width: 100%;
-	height: 50px;
 	position: relative;
 	background:linear-gradient(deepskyblue,skyblue);
 }
 
 
 .stripe1 {
+	height: 60px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -165,7 +165,7 @@ a{
 }
 
 .alpha{
-	margin-top: 20px
+	margin-top: 15px
 }
 
 .select-bars{

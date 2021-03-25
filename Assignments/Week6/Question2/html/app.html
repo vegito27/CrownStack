@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="../css/Login/app.css">
 	<link rel="stylesheet" href="../css/App/products.css">
 	<link rel="stylesheet" href="../css/App/categories.css">
+	<link rel="stylesheet" href="../css/App/dropdown.css">
 	<link rel="stylesheet" href="../css/App/app-footer.css">
 	<link rel="stylesheet" href="../css/App/responsive.css">
 	<link rel="stylesheet" href="../css/Login/login.css">
@@ -25,7 +26,9 @@
 	</script>
 	
 	<style>
-		
+		.center{
+			margin-right:5px;}
+
 		.login1{
 			display: none
 		}
@@ -33,16 +36,6 @@
 		.pix{
 			display: none
 		}
-
-		select{
-			background-color: #07528e;
-		    width: auto;
-		    height: 30px;
-		    color: white;
-		    border-color: white;
-		    padding: 2px;
-		}
-
 	</style>
 </head>
 <body>
@@ -70,7 +63,7 @@
 			</div>
 
 			<div class="dropdown2">
-				<a id="open" class="dropbtn opt" style=""><img src="../Images/NavBar/Icon/menuwhite.svg" style="height: 25px;width: 25px; margin-right:25px"></a>
+				<a id="open" class="dropbtn opt" style=""><img src="../Images/NavBar/Icon/menu.svg" style="height: 25px;width: 25px; margin-right:25px"></a>
 			</div>
 			<div class="dropdown2">
 				<a id="close" class="dropbtn" ><img src="../Images/NavBar/Icon/close.svg" style=" height: 25px;width: 25px;"></i></a>
@@ -80,20 +73,17 @@
 
 	</header>
 
-
-
 	<div class="magic-container" >
-			<div class="menucontainer menu1">
-				<div class="element">
-					<a class="mymenu"></a>
-					<a class="mymenu"></a>
-					<a class="mymenu"></a>
-					<a class="mymenu" ></a>
-					<a class="mymenu" href="../html/login.html">Login</a>
-				</div>
+		<div class="menucontainer menu1">
+			<div class="element">
+				<a class="mymenu"></a>
+				<a class="mymenu"></a>
+				<a class="mymenu"></a>
+				<a class="mymenu" ></a>
+				<a class="mymenu" href="../html/login.html">Login</a>
 			</div>
+		</div>
 	</div>
-
 
 	<div class="alert success pix" >
 	  <p class="closebtn" style="margin:0;padding:0">&times;</p>  
@@ -105,32 +95,40 @@
 		<h2> Product Categories</h2>
 
 		<div class="custom-select select-bars" id="stripe1" >
-			<div class="bar">
-				<label > WholeSeller:</label>
-				<select name="whs" id="whs">
-				</select>
-			</div>
-			<div class="bar">
 
-				<label >Outlets :</label>
-				 <select name="outlets" id="outlets" >
-				</select>
+			<div class="container-x">
+				<span>WholeSellers:</span>
+				<div class="bar dropdown-common">
+					<select name="whs" class="dropdown-select" id="whs">
+					</select>
+				</div>
 			</div>
 
-			<div class="bar">
+			<div class="container-x">
+				<span>Outlets:</span>
+				<div class="bar dropdown-common">
 
-				<label>Sort By:</label>
-				 <select name="sort" id="sort" >
-				 	<option name="sorted-price">Price</option>
-				 	<option name="sorted-ration">Ratings</option>
-				</select>
+					 <select name="outlets" class="dropdown-select" id="outlets" >
+					</select>
+				</div>
+			</div>
+
+
+			<div class="container-x">
+				<span>Sort:</span>
+
+				<div class="bar dropdown-common">
+						
+					 <select name="sort" class="dropdown-select" id="sort" >
+					 	<option name="sorted-price">Price</option>
+					 	<option name="sorted-ration">Ratings</option>
+					</select>
+				</div>
 			</div>
 
 		</div>
 		
 	</div>
-
-
 
 	<div class="container">
 
