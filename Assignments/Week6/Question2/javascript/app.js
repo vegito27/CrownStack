@@ -29,13 +29,12 @@ const token=sessionStorage.getItem('token1')
 
 	// console.log(token)
 
-	$.ajax({
-		  url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/initialData",
-		  type: 'GET',
-		  headers: {"Netco-JWT": token},
-		  success:function(res){ 
-		  	// console.log(res)
-		  	
-			}
-		});
-	
+$.ajax({
+	url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/initialData",
+	type: 'GET',
+	headers: {"Netco-JWT": token},
+	success:function(res){ 
+	// console.log(res)
+
+	}
+});

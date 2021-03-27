@@ -1,5 +1,17 @@
 let wholeSellers=$('#whs')
 let outlets=$('#outlets')
+let productQuantityArray=null
+var TOTAL_PRICE;
+var current_outlet=""
+
+
+if(sessionStorage.getItem('TOTAL_PRICE')){
+
+	TOTAL_PRICE=parseInt(sessionStorage.getItem('TOTAL_PRICE'))
+}
+else{
+	TOTAL_PRICE=0
+}
 
 
 $(document).ready(()=>{
@@ -24,13 +36,21 @@ $(document).ready(()=>{
 
 		addOutlets(firstId)
 
-		// getCategories(firstId)
+		let data=sessionStorage.getItem('productQuantity')
 
-		// getProductsByWholeSellerId(firstId)
+		if(data==="" || data===null){
 
+			sessionStorage.setItem('productQuantity',"{}")
+
+			sessionStorage.setItem('TOTAL_PRICE',0)
+
+		}
+
+		$('.total-price span').html(sessionStorage.getItem('TOTAL_PRICE'))
+
+		productQuantityArray=JSON.parse(sessionStorage.getItem('productQuantity'))
 
 		getProductsAndCategoriesByWholeSellerId(firstId)
-
 
 		if(firstId){
 
@@ -41,7 +61,6 @@ $(document).ready(()=>{
 		}
 		// let p=getProductResponse(firstId);
 
-
 	})
 
 
@@ -51,7 +70,6 @@ $(document).ready(()=>{
 
 function addOutlets(whsId){
 
-
 	if(whsId!==null){
 
 		outlets.empty()
@@ -60,16 +78,20 @@ function addOutlets(whsId){
 
 		let organization=response.organizations;
 
+		current_outlet=response.organizations[0].orgName
+
 		// console.log(response)
 
 		organization.forEach(organization=>{
 
 			let whs=organization.whs[0].whsOrgId
+
+			
 			let whsName=organization.orgName
 
 			if(whs==whsId){
 
-				outlets.append(`<option >${whsName}</option>`)
+				outlets.append(`<option id="${organization.orgId}">${whsName}</option>`)
 			
 				}
 			})
@@ -93,21 +115,8 @@ $("select#whs").change(function(){
 
     $('.container ol').append(`<li><div id="p0" onclick=getProductsByWholeSellerId(${wholeSellers}) class="tooltip"><img src="../Images/App/basket.png" class="img"/><div class="category-name">All</div></div></li>`)
 
-    // displayAll(wholeSellers)
 
-    // let productData=getProductResponse(wholeSellers)
-
-    //  // console.log(productData)
-
-    // productData.sort((a,b)=>{
-    // 	return parseInt(a.price)-parseInt(b.price)
-    // })
-
-    // console.log(productData)
-
-
-    // getCategories(wholeSellers)
-    
+    sessionStorage.setItem("productQuantity",JSON.stringify(productQuantityArray))
 
     getProductsAndCategoriesByWholeSellerId(wholeSellers)
 
@@ -205,8 +214,14 @@ function getProductsAndCategoriesByWholeSellerId(id){
 		 	let productName=product.productName;
 		 	let categoryid=product.categoryId;
 		 	let categoryName=getCategoryById(categoryArray,categoryid)
-		 	let productId=product.productId
-		 	let quantity=1
+		 	let productId=product.productId;
+		 	let quantity;
+		 	if(productQuantityArray[`product`+`${productId}`]){
+		 		quantity=productQuantityArray[`product`+`${productId}`]
+			 }
+		 
+		 	let qnty=0
+		 	
 		 	let price=product.priceList[0].list_price
 		 	let image=`https://res.cloudinary.com/nfrnds/image/upload/fmcgdd`+product.smallImgUrl;
 
@@ -223,6 +238,15 @@ function getProductsAndCategoriesByWholeSellerId(id){
 
 		 	if(product.smallImgUrl!==null && product.smallImgUrl!=="" ){
 
+		 		if(quantity){
+
+			 		qnty=productQuantityArray[`product`+`${productId}`].qnty
+
+			 		console.log(qnty)
+
+			 	}
+
+
 		 		let productTag=
 
 		 		`<div class="product-container">
@@ -234,11 +258,11 @@ function getProductsAndCategoriesByWholeSellerId(id){
 							<div class="name"><h3>${productName}</h3></div>
 							<div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. </div>
-							<div class="price">Price: <b>${price}<b> $</div>
+							<div class="price" >Price: <b id="price${productId}">${price}</b>$</div>
 
 							<div class="quatity">
 								<div id="product${productId}" onclick="removeQuantity(this)" class="plus">-</div>
-								<div id="product${productId}p" class="value">1</div>
+								<div id="product${productId}p" class="value">${qnty}</div>
 								<div id="product${productId}" onclick="addQuantity(this)" class="minus">+</div>
 							</div>
 						</div>
@@ -252,9 +276,6 @@ function getProductsAndCategoriesByWholeSellerId(id){
 
 
 		let categories=response.categories;
-		
-
-		console.log(categories)
 
 		 categories.sort((a,b)=>{
 			 	return b.productCategoryId-a.productCategoryId
@@ -273,19 +294,17 @@ function getProductsAndCategoriesByWholeSellerId(id){
 				if(key==="imgUrl" && category.productCategoryId>=0){
 
 					$('.container ol').append(`<li><div id="p${category.productCategoryId}" onclick=handleCategory(this.id,${id}) class="tooltip"><img  class="img" src="https://res.cloudinary.com/nfrnds/image/upload/fmcgdd${value}" /><span class="tooltiptext">${category.categoryName}</span><div class="category-name">${category.categoryName}</div></div></li>`)
-				}
-
-					
+				}		
 			}
-
 		}) 
-
 	})
-
-
 }
 
+$("select#outlets").change(function(){
 
+	current_outlet=$(this).children("option:selected").attr('id');
 
+	console.log(current_outlet)
 
+})
 

@@ -1,16 +1,8 @@
-
-
-
 function getCategories(id){
-
 
 	$.get(`https://netco-indo-test.nfrnds.net:20003/fmcg-dd/catalog?whsId=${id}`,(response,status)=>{
 
 		let categories=response.categories;
-
-		// console.log(response)
-
-		// console.log("categories",categories)
 
 		 categories.sort((a,b)=>{
 			 	return b.productCategoryId-a.productCategoryId
@@ -31,10 +23,7 @@ function getCategories(id){
 
 					$('.container ol').append(`<li><div id="p${category.productCategoryId}" onclick=handleCategory(this.id,${id}) class="tooltip"><img  class="img" src="https://res.cloudinary.com/nfrnds/image/upload/fmcgdd${value}" /><span class="tooltiptext">${category.categoryName}</span><div class="category-name">${category.categoryName}</div></div></li>`)
 				}
-
-					
 			}
-
 		})
 
 	})
@@ -45,33 +34,26 @@ function getCategories(id){
 
 var previousId;
 
-	function handleCategory(productId,whsId){
+function handleCategory(productId,whsId){
 
-		console.log(whsId,productId)
+	let num=parseInt(productId.split('p')[1])
 
+	removeAllProducts(whsId,num)
 
-		let num=parseInt(productId.split('p')[1])
+	displayProductByCategory(whsId,num)
 
+	$(document).on('click', `#${productId}`, function() {
+		
 
-		removeAllProducts(whsId,num)
+		$(`#${productId}`).addClass("transform");
 
+		if(previousId!==productId){
 
+			$(`#${previousId}`).removeClass("transform");
+		}
 
-		displayProductByCategory(whsId,num)
+		previousId=productId
+     
+	});
 
-
-		$(document).on('click', `#${productId}`, function() {
-
-
-			$(`#${productId}`).addClass("transform");
-
-			if(previousId!==productId){
-
-				$(`#${previousId}`).removeClass("transform");
-			}
-
-			previousId=productId
-	     
-		});
-
-	}
+}

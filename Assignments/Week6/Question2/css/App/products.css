@@ -6,6 +6,12 @@
 body{
 	background-color: white;
 }
+
+.alpha{
+	margin-bottom: 200px
+}
+
+
 .alpha ul{
 	margin: auto;
 	max-width: 100%;
@@ -13,13 +19,18 @@ body{
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	list-style: none;
+	flex-grow: 1
 }
 
 .alpha li{
 	max-height: 400px;
-	width: 180px;
 	border: 1px solid blue;
-	margin: auto;	
+	margin: auto;
+	height: auto ;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;	
+	flex-grow: 1;
 }
 
 
@@ -40,8 +51,7 @@ body{
 	height: auto ;
 	display: flex;
 	justify-content: flex-start;
-	position: relative;
-	flex-grow: 1;
+	flex-wrap: wrap;
 }
 
 .product-card{
