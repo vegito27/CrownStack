@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+		CheckOut
+	</title>
+	<link rel="stylesheet" href="../css/Checkout/checkout.css">
+	<link rel="stylesheet" href="../css/Checkout/check-out-left.css">
+	<link rel="stylesheet" href="../css/Checkout/checkout-right.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../javascript/App/jquery.js"></script>
+	<script src="../javascript/App/globalvariables.js"></script>
+
+	<script src="../javascript/App/quantity.js"></script>
+
+</head>
+<body>
+
+	<div class="checkout-container">
+
+		<header id="header" class="common">
+			CheckOut
+			
+		</header>
+
+		<main class="main-common">
+
+			<div class="checkout-left" style="position: relative">
+
+				<div class="address common">Delivery Location</div>
+
+				<div>
+
+					<div class="checkout-input common2">
+						<div class="checkout-name" id="user">
+							<input type="text" name="" id="userName" placeholder=""  value=""  disabled><br>
+							<span id="reduser">This field is required***</span>
+							
+						</div>
+						<div class="checkout-name" >
+							<input type="email" id="userEmail" name="" value="" placeholder="Email..."><br>
+							<span id="redemail"> This field is required***</span>
+						</div>
+					</div>
+
+					<div class="checkout-input common2">
+						<input id="phone" type="text" name="phone" value="" placeholder="Phone...." disabled>
+						<button type="text" name="location" id="location-button" onclick="getLocation()">Get Current Location..</button>
+					</div>
+				</div>
+
+				<button id="place-order" class="checkout-place">Place Order</button>
+			</div>
+
+
+		<!--    Cart  -->
+		
+		<div class="container">
+
+			<div class="header common">
+				<div class="cart-Item common">
+					Cart Item
+				</div>
+			</div>
+
+			<div>
+
+				<div class="main-card">
+
+					<div class="product-container" id="checkout-product-cart-container">
+
+					</div>
+			</div>
+		</div>
+
+			<div class="cart-footer">
+				<div class="stripe">
+					<div  class="my-common">
+						<div class="total" >Total Price:</div>
+						<div class="price" id="TOTAL_PRICE">0</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		</main>
+		<footer class="footer common">Footer</footer>
+	</div>
+
+	<script src="../javascript/App/productCart.js"></script>
+	<script src="../javascript/App/validate.js"></script>
+
+	<script type="text/javascript">
+
+
+		function implement(){
+
+			let user=JSON.parse(localStorage.getItem('user'))
+
+			document.querySelector("#userName").setAttribute("placeholder", user.fullName)
+			document.querySelector("#phone").setAttribute("placeholder", user.msisdn)
+
+		}
+
+		implement()
+
+		function getLocation(){
+	
+			if (navigator.geolocation) { navigator.geolocation.getCurrentPosition(savePosition);}
+		}
+
+		function savePosition(position) {
+			 localStorage.setItem("location",JSON.stringify({latitude:position.coords.latitude,logitude:position.coords.longitude}))
+			 $('#location-button').html("Location Saved Successfully")
+			 $('#location-button').css("backgroundColor", "green")	  
+		}
+
+
+	</script>
+
+</body>
+</html>
