@@ -220,7 +220,6 @@ body:-webkit-scrollbar,html:-webkit-scrollbar{
 		box-shadow: 0 0 5px gray
 
 	}
-
 	.main-common{
 		display: block
 	}
@@ -236,16 +235,26 @@ body:-webkit-scrollbar,html:-webkit-scrollbar{
 	}
 
 	.product-container{
-
 		min-height: 480px;
 		box-shadow: 0 0 2px lightgray
+	}
+}
 
 
+@media screen and (max-width: 525px){
 
+	.checkout-left{
+		width: 90%;
 	}
 
+	.checkout-place{
+		width: 80%;
+	}
 
+}
 
-
-
+@media screen and (max-width: 350px){
+	body{
+		display: none
+	}
 }

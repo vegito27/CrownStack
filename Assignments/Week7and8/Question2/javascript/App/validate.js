@@ -97,9 +97,60 @@ GET('#place-order').addEventListener('click',()=>{
 
 	if(LOCATION && CART_ITEMS && outletID && whsID && userDetails){
 
-		 // window.location.href="./app.html"
+		GET("#myModal").style.display = "block";
 
+		GET('.close').onclick=()=>{
+		
+			GET("#myModal").style.display = "none"
+		}
 	}
 
 
 })
+
+
+GET('#shopping-button').onclick=()=>{
+
+	localStorage.removeItem('location')
+	localStorage.removeItem('storage')
+	sessionStorage.removeItem('TOTAL_PRICE')
+	sessionStorage.removeItem('whsId')
+	sessionStorage.removeItem('outletId')	
+	sessionStorage.removeItem('productQuantity')
+}
+
+
+
+
+function OpenModal(){
+
+	var modal = document.getElementById("myModal");
+
+
+	var btn = document.getElementById("myBtn");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks the button, open the modal 
+	btn.onclick = function() {
+	  modal.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	  modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+	    modal.style.display = "none";
+	  }
+	}
+
+
+}
+
+
+

@@ -27,37 +27,21 @@
 		align-items: center;
 	}
 
-	/* .stripe1{
-		width: 100%;
-		margin-top: 66px;
-		height: 60px;
-		display: flex;
-		justify-content: center
-	} */
-
-	/* #stripe1{
-		width: 100%;
-		display: flex;
-		justify-content: space-evenly
-	} */
 
 
 	.stripe1 .bar{
 		text-align: center;
 	}
 
-	.dropdown-common{
+	/* .dropdown-common{
 		 width: 120px;
-	}
+	} */
 
 	.dropdown-select{
 		width: 80%;
 		padding: 0;
 
 	}
-
-
-
 }
 
 
