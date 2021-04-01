@@ -17,7 +17,7 @@ GET('.right-arrow').addEventListener('click',()=>{
 
 	GET('.new-month').innerHTML=MONTHS[currentMonth]
 
-	obj={"year":currentYear,"month":MONTHS[currentMonth],"monthIDX":currentMonth,"date":currentDate,"day":days[getSelectedDay(currentDate-1)]}
+	obj={"year":currentYear,"month":MONTHS[currentMonth],"monthIDX":currentMonth+1,"date":currentDate,"day":days[getSelectedDay(currentDate-1)]}
 	setCurretDate(obj)
 
 	Delete()
@@ -52,7 +52,7 @@ GET('.left-arrow').addEventListener('click',()=>{
 
 	GET('.new-month').innerHTML=MONTHS[currentMonth]
 
-	obj={"year":currentYear,"month":MONTHS[currentMonth],"monthIDX":currentMonth,"date":currentDate,"day":days[getSelectedDay(currentDate-1)]}
+	obj={"year":currentYear,"month":MONTHS[currentMonth],"monthIDX":currentMonth+1,"date":currentDate,"day":days[getSelectedDay(currentDate-1)]}
 	setCurretDate(obj)
 
 	Delete()
@@ -83,7 +83,7 @@ GET('.month-right-arrow').addEventListener('click',()=>{
 
 	GET('#year-selector').innerHTML=currentYear
 
-	obj={"year":currentYear,"month":MONTHS[currentMonth],"monthIDX":currentMonth,"date":currentDate,"day":days[getSelectedDay(currentDate-1)]}
+	obj={"year":currentYear,"month":MONTHS[currentMonth],"monthIDX":currentMonth+1,"date":currentDate,"day":days[getSelectedDay(currentDate-1)]}
 	setCurretDate(obj)
 
 	Delete()
@@ -114,7 +114,7 @@ GET('.month-left-arrow').addEventListener('click',()=>{
 
 	GET('#year-selector').innerHTML=currentYear
 
-	obj={"year":currentYear,"month":MONTHS[currentMonth],"monthIDX":currentMonth,"date":currentDate,"day":days[getSelectedDay(currentDate-1)]}
+	obj={"year":currentYear,"month":MONTHS[currentMonth],"monthIDX":currentMonth+1,"date":currentDate,"day":days[getSelectedDay(currentDate-1)]}
 	setCurretDate(obj)
 
 	Delete()

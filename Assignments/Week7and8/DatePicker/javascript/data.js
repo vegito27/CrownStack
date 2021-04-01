@@ -35,7 +35,7 @@ function getSelectedDay(date){
 
 }
 
-obj={"year":currentYear,"month":MONTHS[currentMonth],"monthIDX":currentMonth,"date":currentDate,"day":days[getSelectedDay(currentDate-1)]}
+obj={"year":currentYear,"month":MONTHS[currentMonth],"monthIDX":currentMonth+1,"date":currentDate,"day":days[getSelectedDay(currentDate-1)]}
 
 setCurretDate(obj)
 
